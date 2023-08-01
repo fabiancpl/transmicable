@@ -26,15 +26,58 @@
     }
 }
 
-.moving-image-left {
-    animation: moveRightToLeft 15s linear infinite; /* Adjust duration and timing function as per your preference */
+
+.abordaje {
 }
 
-@keyframes moveRightToLeft {
-    0% {
-        transform: translateX(125%);
+@media (max-width: 844px) {
+    .abordaje {
+        background-position: top !important;
+        background-size: contain !important;
+        background-image: url("../../assets/images/abordaje_mobile.png") !important;
+        margin-top: -12% !important;
     }
-    100% {
-        transform: translateX(-125%); /* Adjust the percentage to move the image across the X-axis */
+
+}
+
+.titulo-primera-pagina {
+}
+
+@media (max-width: 844px) {
+    .titulo-primera-pagina {
+        margin-top: 5% !important;
+        transform: translateX(12px);
+    }
+
+}
+
+.logo-mobile {
+
+}
+
+.logo-container {
+
+}
+
+.cabina-transmicable {
+
+}
+
+@media (max-width: 844px) {
+    .logo-mobile {
+        width: 100% !important;
+    }
+
+    .logo-container {
+        margin-right: 0% !important;
+        margin-left: 0% !important;
+    }
+
+    .cabina-transmicable {
+        min-height: 55vh !important;
+        margin-top: -4.5% !important;
+        background-size: contain !important;
+        background-position: center !important;
+        transform: translateX(12px);
     }
 }

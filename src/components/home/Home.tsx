@@ -6,6 +6,7 @@ import cabinaTransmicable from "../../assets/images/cabina_transmicable.png";
 import nubes2 from "../../assets/images/nubes_2.png";
 import nubes1 from "../../assets/images/nubes_1.png";
 import mountains from "../../assets/images/mountains.png";
+import abordaje from "../../assets/images/abordaje.png";
 
 function Home() {
   return (
@@ -47,6 +48,7 @@ function Home() {
                 minHeight: "62vh",
                 marginTop: "-3.5%",
               }}
+              className="cabina-transmicable"
             ></Col>
             <Col
               lg={4}
@@ -59,6 +61,7 @@ function Home() {
                 justifyContent: "center",
                 marginTop: "8%",
               }}
+              className="titulo-primera-pagina"
             >
               <div>
                 <h3 style={{ textAlign: "center", color: "#E34339" }}>
@@ -108,6 +111,7 @@ function Home() {
               marginRight: "3%",
               marginLeft: "3%",
             }}
+            className="logo-container"
           >
             <Image
               src="./src/assets/logos/salurbal.png"
@@ -117,6 +121,7 @@ function Home() {
                 aspectRatio: "3/2",
                 objectFit: "contain",
               }}
+              className="logo-mobile"
               fluid
             />
           </Col>
@@ -129,6 +134,7 @@ function Home() {
               marginRight: "3%",
               marginLeft: "3%",
             }}
+            className="logo-container"
           >
             <Image
               src="./src/assets/logos/drexel_university.png"
@@ -139,6 +145,7 @@ function Home() {
                 objectFit: "contain",
                 mixBlendMode: "darken",
               }}
+              className="logo-mobile"
               fluid
             />
           </Col>
@@ -151,6 +158,7 @@ function Home() {
               marginRight: "3%",
               marginLeft: "3%",
             }}
+            className="logo-container"
           >
             <Image
               src="./src/assets/logos/universidad_andes.png"
@@ -160,6 +168,7 @@ function Home() {
                 aspectRatio: "3/2",
                 objectFit: "contain",
               }}
+              className="logo-mobile"
               fluid
             />
           </Col>
@@ -172,6 +181,7 @@ function Home() {
               marginRight: "3%",
               marginLeft: "3%",
             }}
+            className="logo-container"
           >
             <Image
               src="./src/assets/logos/universidad_norte.png"
@@ -181,9 +191,51 @@ function Home() {
                 aspectRatio: "3/2",
                 objectFit: "contain",
               }}
+              className="logo-mobile"
               fluid
             />
           </Col>
+          <Container fluid>
+            <Row style={{ display: "flex", justifyContent: "right" }}></Row>
+            <Row style={{ marginTop: "15%" }}>
+              <Col lg={6} md={6} sm={12} xs={12}></Col>
+              <Col lg={6} md={6} sm={12} xs={12}>
+                <p
+                  style={{
+                    textAlign: "justify",
+                    textJustify: "inter-word",
+                    color: "#32677F",
+                    margin: "5%",
+                  }}
+                >
+                  TransMiCable es el primer cable aéreo de Bogotá, el cual fue
+                  inaugurado en Ciudad Bolívar en diciembre de 2018. La línea
+                  del cable aéreo tiene 3.4 kilómetros de longitud, cuatro
+                  estaciones y 163 cabinas. Este cable beneficia a la localidad
+                  de Ciudad Bolívar en donde viven aproximadamente 600,000
+                  personas y se conecta con el sistema de transporte público de
+                  Bogotá. TransMiCable fue el principal componente de una
+                  intervención urbana integral que incluye un museo local, una
+                  biblioteca, una oficina de turismo, una oficina de atención al
+                  ciudadano, una manzana del cuidado, renovación de parques,
+                  mercados y pavimentación de vías.
+                </p>
+              </Col>
+            </Row>
+            <Row
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                backgroundImage: `url(${abordaje})`,
+                backgroundSize: "cover",
+                backgroundRepeat: "no-repeat",
+                backgroundPosition: "center",
+                minHeight: "62vh",
+                marginTop: "-25%",
+              }}
+              className="abordaje"
+            ></Row>
+          </Container>
         </Row>
       </Container>
     </div>
