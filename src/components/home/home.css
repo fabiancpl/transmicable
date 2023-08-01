@@ -1,0 +1,40 @@
+.main-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #b7d4dc;
+}
+
+.resource-image {
+    position: absolute !important;
+}
+
+.debug {
+    outline: red dashed 5px;
+}
+
+.moving-image-right {
+    animation: moveLeftToRight 15s linear infinite; /* Adjust duration and timing function as per your preference */
+}
+
+@keyframes moveLeftToRight {
+    0% {
+        transform: translateX(-125%);
+    }
+    100% {
+        transform: translateX(125%); /* Adjust the percentage to move the image across the X-axis */
+    }
+}
+
+.moving-image-left {
+    animation: moveRightToLeft 15s linear infinite; /* Adjust duration and timing function as per your preference */
+}
+
+@keyframes moveRightToLeft {
+    0% {
+        transform: translateX(125%);
+    }
+    100% {
+        transform: translateX(-125%); /* Adjust the percentage to move the image across the X-axis */
+    }
+}
