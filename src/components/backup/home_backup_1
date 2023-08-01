@@ -1,0 +1,81 @@
+import "./home.css";
+import { Col, Container, Row } from "reactstrap";
+import { Image } from "react-bootstrap";
+
+function Home() {
+  return (
+    <div className="main-content">
+      <Image
+        src="./src/assets/images/nubes_2.png"
+        alt="Nubes"
+        className="resource-image"
+        style={{ width: "70%", marginTop: "10rem" }}
+        fluid
+      />
+      <Image
+        src="./src/assets/images/cable.png"
+        alt="Cable del transmicable"
+        className="resource-image"
+        style={{ width: "100%" }}
+        fluid
+      />
+      <Container>
+        <Row>
+          <Col sm={true}></Col>
+          <Col md={true}>
+            <Image
+              src="./src/assets/images/cabina_transmicable.png"
+              alt="Cabina de transmicable"
+              className="resource-image"
+              style={{ width: "25%", marginTop: "-3%" }}
+              fluid
+            />
+          </Col>
+          <Col sm={true}></Col>
+        </Row>
+        <Row
+          className="justify-content-md-center"
+          style={{ paddingTop: "45%" }}
+        >
+          <Col sm={true}></Col>
+          <Col sm={true}>
+            <Image
+              src="./src/assets/logos/salurbal.png"
+              alt="Logo salurbal"
+              style={{ width: "60%" }}
+              fluid
+            />
+          </Col>
+          <Col sm={true}></Col>
+          <Col sm={true}>
+            <Image
+              src="./src/assets/logos/drexel_university.png"
+              alt="Logo drexel university"
+              style={{ mixBlendMode: "darken" }}
+              fluid
+            />
+          </Col>
+          <Col sm={true}></Col>
+          <Col sm={true}>
+            <Image
+              src="./src/assets/logos/universidad_andes.png"
+              alt="Logo universidad de los andes"
+              fluid
+            />
+          </Col>
+          <Col sm={true}></Col>
+          <Col sm={true}>
+            <Image
+              src="./src/assets/logos/universidad_norte.png"
+              alt="Logo universidad del norte"
+              fluid
+            />
+          </Col>
+          <Col sm={true}></Col>
+        </Row>
+      </Container>
+    </div>
+  );
+}
+
+export default Home;
