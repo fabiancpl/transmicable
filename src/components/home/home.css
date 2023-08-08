@@ -5,16 +5,413 @@
     background-color: #b7d4dc;
 }
 
-.resource-image {
-    position: absolute !important;
+section {
+    scroll-snap-align: end;
+}
+
+html {
+    scroll-snap-type: y mandatory;
+}
+
+.abordaje-cabina {
+    display: flex;
+    justify-content: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 62vh;
+    margin-top: -25%;
+}
+
+.titulo-primera-pagina {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 8%;
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    width: 200px;
+    height: 100px;
+    margin-right: 3%;
+    margin-left: 3%;
+}
+
+.logo-resource {
+    width: 70%;
+    aspect-ratio: 3/2;
+    object-fit: contain;
+}
+
+.cabina-transmicable {
+    display: flex;
+    justify-content: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 62vh;
+    margin-top: -3.5%;
+}
+
+.banner-subtitulo {
+    min-height: 15vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-top: 8%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.texto-banner-subtitulo {
+    color: white;
+}
+
+.mountains {
+    padding-top: 6%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+}
+
+.mapa-transmicable {
+    min-height: 100vh;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-top: 3%;
+}
+
+.parrafo-pagina-2 {
+    text-align: justify;
+    text-justify: inter-word;
+    color: #32677F;
+    margin: 5%;
+    height: 420px;
+    font-size: 1.5em;
+}
+
+.moving-image-right {
+    animation: moveLeftToRight 15s linear infinite; /* Adjust duration and timing function as per your preference */
+}
+
+.mountains-personaje-1 {
+    padding-top: 6%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    margin-top: -12%;
+    min-height: 95vh;
+}
+
+.audio-1 {
+    min-height: 18vh;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-top: 22%;
+    cursor: pointer;
+}
+
+.audio-1-column {
+    padding-left: 5%;
+}
+
+.bubble-1 {
+    height: 60vh;
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.bubble-1-column {
+    display: flex;
+    justify-content: center;
+    padding-left: 5%;
+}
+
+.personaje-1-mobile-col {
+    display: none;
+}
+
+.personaje-1-mobile {
+    display: none;
 }
 
 .debug {
     outline: red dashed 5px;
 }
 
-.moving-image-right {
-    animation: moveLeftToRight 15s linear infinite; /* Adjust duration and timing function as per your preference */
+@media (max-width: 375px) {
+    .logo-resource {
+        width: 100% !important;
+    }
+
+    .logo-container {
+        margin-right: 0% !important;
+        margin-left: 0% !important;
+        margin-bottom: 5%;
+    }
+
+    .cabina-transmicable {
+        min-height: 45vh !important;
+        margin-top: -8.5% !important;
+        background-size: contain !important;
+        background-position: center !important;
+        transform: translateX(12px);
+    }
+
+    .abordaje-cabina {
+        background-position: center bottom !important;
+        background-size: contain !important;
+        background-image: url("../../assets/images/abordaje_mobile.png") !important;
+        margin-top: -30% !important;
+        margin-left: 1%;
+        margin-right: 1%;
+        width: 100%;
+    }
+
+    .titulo-primera-pagina {
+        margin-top: 8% !important;
+        transform: translateX(12px);
+    }
+
+    .banner-subtitulo {
+        min-height: 10vh !important;
+        transform: scaleX(-1) !important;
+        margin-right: 11%;
+    }
+
+    .texto-banner-subtitulo {
+        transform: scaleX(-1) !important;
+    }
+
+    .titulo-primera-pagina h1 {
+        font-size: 2em !important;
+    }
+
+    .titulo-primera-pagina h2 {
+        font-size: 1.5em !important;
+    }
+
+    .mapa-transmicable {
+        background-image: url("../../assets/images/mapa_mobile.png") !important;
+    }
+
+    .parrafo-pagina-2 {
+        height: 255px;
+        font-size: 13px !important;
+    }
+
+    .mountains-personaje-1 {
+        background-image: url("../../assets/images/mountains.png") !important;
+    }
+
+    .audio-1 {
+        display: none !important;
+    }
+
+    .personaje-1-mobile {
+        height: 85vh;
+        display: flex !important;
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        cursor: pointer;
+    }
+
+    .personaje-1-mobile-col {
+        display: flex;
+        justify-content: center;
+    }
+
+    .bubble-1-column {
+        display: none;
+    }
+}
+
+@media (min-width: 376px) and (max-width: 430px) {
+    .logo-resource {
+        width: 100% !important;
+    }
+
+    .logo-container {
+        margin-right: 0% !important;
+        margin-left: 0% !important;
+        margin-bottom: 5%;
+    }
+
+    .cabina-transmicable {
+        min-height: 55vh !important;
+        margin-top: -8.5% !important;
+        background-size: contain !important;
+        background-position: center !important;
+        transform: translateX(12px);
+    }
+
+    .abordaje-cabina {
+        background-position: bottom !important;
+        background-size: contain !important;
+        background-image: url("../../assets/images/abordaje_mobile.png") !important;
+        margin-top: -50% !important;
+    }
+
+    .titulo-primera-pagina {
+        margin-top: 8% !important;
+        transform: translateX(12px);
+    }
+
+    .banner-subtitulo {
+        min-height: 10vh !important;
+        transform: scaleX(-1) !important;
+        margin-right: 11%;
+    }
+
+    .texto-banner-subtitulo {
+        transform: scaleX(-1) !important;
+    }
+
+    .titulo-primera-pagina h1 {
+        font-size: 2em !important;
+    }
+
+    .titulo-primera-pagina h2 {
+        font-size: 1.5em !important;
+    }
+
+    .mapa-transmicable {
+        background-image: url("../../assets/images/mapa_mobile.png") !important;
+    }
+
+    .parrafo-pagina-2 {
+        height: unset !important;
+        font-size: unset !important;
+    }
+
+    .mountains-personaje-1 {
+        background-image: url("../../assets/images/mountains.png") !important;
+        margin-top: unset !important;
+
+    }
+
+    .audio-1 {
+        display: none !important;
+    }
+
+    .personaje-1-mobile {
+        height: 85vh;
+        display: flex !important;
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        cursor: pointer;
+    }
+
+    .personaje-1-mobile-col {
+        display: flex;
+        justify-content: center;
+    }
+
+    .bubble-1-column {
+        display: none;
+    }
+}
+
+@media (min-width: 431px) and (max-width: 1080px) {
+    .cabina-transmicable {
+        min-height: 50vh !important;
+        margin-top: -7.5% !important;
+        background-size: contain !important;
+        background-position: center !important;
+        transform: translateX(12px);
+    }
+
+    .titulo-primera-pagina {
+        margin-top: 6% !important;
+        transform: translateX(12px);
+    }
+
+    .logo-container {
+        margin-right: 0% !important;
+        margin-left: 0% !important;
+    }
+
+    .logo-resource {
+        width: 90% !important;
+    }
+
+    .abordaje-cabina {
+        background-position: bottom !important;
+        background-size: contain !important;
+        margin-top: -72% !important;
+    }
+
+    .banner-subtitulo {
+        min-height: 8vh !important;
+    }
+
+    .titulo-primera-pagina h1 {
+        font-size: 3em !important;
+    }
+
+    .titulo-primera-pagina h2 {
+        font-size: 3em !important;
+    }
+
+    .mapa-transmicable {
+        background-image: url("../../assets/images/mapa_mobile.png") !important;
+    }
+
+    .parrafo-pagina-2 {
+        height: unset !important;
+        font-size: unset !important;
+    }
+
+    .mountains-personaje-1 {
+        background-image: url("../../assets/images/mountains.png") !important;
+        margin-top: unset !important;
+
+    }
+
+    .audio-1 {
+        display: none !important;
+    }
+
+    .personaje-1-mobile {
+        height: 85vh;
+        display: flex !important;
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        cursor: pointer;
+    }
+
+    .personaje-1-mobile-col {
+        display: flex;
+        justify-content: center;
+    }
+
+    .bubble-1-column {
+        display: none;
+    }
+
 }
 
 @keyframes moveLeftToRight {
@@ -23,61 +420,5 @@
     }
     100% {
         transform: translateX(125%); /* Adjust the percentage to move the image across the X-axis */
-    }
-}
-
-
-.abordaje {
-}
-
-@media (max-width: 844px) {
-    .abordaje {
-        background-position: top !important;
-        background-size: contain !important;
-        background-image: url("../../assets/images/abordaje_mobile.png") !important;
-        margin-top: -12% !important;
-    }
-
-}
-
-.titulo-primera-pagina {
-}
-
-@media (max-width: 844px) {
-    .titulo-primera-pagina {
-        margin-top: 5% !important;
-        transform: translateX(12px);
-    }
-
-}
-
-.logo-mobile {
-
-}
-
-.logo-container {
-
-}
-
-.cabina-transmicable {
-
-}
-
-@media (max-width: 844px) {
-    .logo-mobile {
-        width: 100% !important;
-    }
-
-    .logo-container {
-        margin-right: 0% !important;
-        margin-left: 0% !important;
-    }
-
-    .cabina-transmicable {
-        min-height: 55vh !important;
-        margin-top: -4.5% !important;
-        background-size: contain !important;
-        background-position: center !important;
-        transform: translateX(12px);
     }
 }

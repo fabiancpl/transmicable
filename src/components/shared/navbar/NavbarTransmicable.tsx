@@ -48,10 +48,24 @@ function NavbarTransmicable() {
         <Collapse isOpen={isOpen} navbar>
           <Nav className="me-auto" navbar>
             <NavItem>
-              <NavLink href={""}>Title 1</NavLink>
+              <NavLink href={"#page1"}>
+                <b>Resultados de la evaluación del TransMiCable</b>
+              </NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href={""}>Title 2</NavLink>
+              <NavLink href={"#page2"}>
+                <b>Qué es TransMiCable</b>
+              </NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink href={"#page3"}>
+                <b>Linea del TransMiCable</b>
+              </NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink href={"#page4"}>
+                <b>Objetivo del estudo TrUST</b>
+              </NavLink>
             </NavItem>
           </Nav>
         </Collapse>
