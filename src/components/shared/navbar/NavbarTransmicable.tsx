@@ -18,7 +18,7 @@ function NavbarTransmicable() {
   const toggleNavbar = () => setOpen(!isOpen);
 
   return (
-    <div>
+    <section>
       <Navbar container="lg" style={{ backgroundColor: "#b7d4dc" }}>
         <NavbarBrand>
           <Hamburger
@@ -64,13 +64,18 @@ function NavbarTransmicable() {
             </NavItem>
             <NavItem>
               <NavLink href={"#page4"}>
-                <b>Objetivo del estudo TrUST</b>
+                <b>Objetivo del estudio TrUST</b>
+              </NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink href={"#page5"}>
+                <b>Resultados estudio TrUST</b>
               </NavLink>
             </NavItem>
           </Nav>
         </Collapse>
       </Navbar>
-    </div>
+    </section>
   );
 }
 

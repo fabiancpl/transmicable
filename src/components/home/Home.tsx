@@ -1,6 +1,6 @@
 import "./home.css";
 import { Col, Container, Row } from "reactstrap";
-import { Image } from "react-bootstrap";
+import { Carousel, Image } from "react-bootstrap";
 import cableTransmicable from "../../assets/images/cable.png";
 import cabinaTransmicable from "../../assets/images/cabina_transmicable.png";
 import nubes2 from "../../assets/images/nubes_2.png";
@@ -19,6 +19,12 @@ import audio_1 from "../../assets/images/audio_1.png";
 import playing_audio_1 from "../../assets/images/audio_1_playing.png";
 import personaje_1_mobile from "../../assets/images/personaje_1_mobile.png";
 import personaje_1_mobile_playing from "../../assets/images/personaje_1_mobile_playing.png";
+import banner_subtitulo_large from "../../assets/images/banner_subtitulo_large.png";
+import transporte_img from "../../assets/images/transporte_img.png";
+import seguridad_img from "../../assets/images/seguridad_img.png";
+import calidad_vida_img from "../../assets/images/calidad_img.png";
+import actividad_fisica_img from "../../assets/images/actividad_fisica_img.png";
+import calidad_aire_img from "../../assets/images/calidad_aire_img.png";
 import { useState } from "react";
 
 function Home() {
@@ -259,6 +265,134 @@ function Home() {
                   onClick={toggleAudio1Mobile}
                   className="personaje-1-mobile"
                 ></div>
+              </Col>
+            </Row>
+          </section>
+          <section id="page5">
+            <Row
+              style={{
+                display: "flex",
+                justifyContent: "right",
+              }}
+            >
+              <Col
+                lg={12}
+                md={12}
+                sm={12}
+                xs={12}
+                style={{
+                  backgroundImage: `url(${banner_subtitulo_large})`,
+                }}
+                className="banner-subtitulo-larger"
+              >
+                <h2
+                  style={{
+                    color: "white",
+                    paddingRight: "10%",
+                  }}
+                  className="texto-banner-subtitulo"
+                >
+                  Conoce los resultados del estudio TrUST
+                </h2>
+              </Col>
+            </Row>
+            <Row
+              style={{
+                marginTop: "4%",
+                paddingBottom: "5%",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                paddingLeft: "3%",
+              }}
+            >
+              <Col className="imagenes-resultado-trust">
+                <Image
+                  fluid
+                  src={transporte_img}
+                  style={{ width: "80%" }}
+                ></Image>
+              </Col>
+              <Col className="imagenes-resultado-trust">
+                <Image
+                  fluid
+                  src={seguridad_img}
+                  style={{ width: "80%" }}
+                ></Image>
+              </Col>
+              <Col className="imagenes-resultado-trust">
+                <Image
+                  fluid
+                  src={calidad_vida_img}
+                  style={{ width: "80%" }}
+                ></Image>
+              </Col>
+              <Col className="imagenes-resultado-trust">
+                <Image
+                  fluid
+                  src={actividad_fisica_img}
+                  style={{ width: "80%" }}
+                ></Image>
+              </Col>
+              <Col className="imagenes-resultado-trust">
+                <Image
+                  fluid
+                  src={calidad_aire_img}
+                  style={{ width: "80%" }}
+                ></Image>
+              </Col>
+              <Col className="carousel-mobile">
+                <Carousel
+                  slide={false}
+                  interval={null}
+                  indicators={false}
+                  style={{
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                  }}
+                >
+                  <Carousel.Item>
+                    <div
+                      style={{ display: "flex", justifyContent: "center" }}
+                      className="carousel-mobile-item"
+                    >
+                      <Image src={transporte_img} fluid></Image>
+                    </div>
+                  </Carousel.Item>
+                  <Carousel.Item>
+                    <div
+                      style={{ display: "flex", justifyContent: "center" }}
+                      className="carousel-mobile-item"
+                    >
+                      <Image src={seguridad_img} fluid></Image>
+                    </div>
+                  </Carousel.Item>
+                  <Carousel.Item>
+                    <div
+                      style={{ display: "flex", justifyContent: "center" }}
+                      className="carousel-mobile-item"
+                    >
+                      <Image src={calidad_vida_img} fluid></Image>
+                    </div>
+                  </Carousel.Item>
+                  <Carousel.Item>
+                    <div
+                      style={{ display: "flex", justifyContent: "center" }}
+                      className="carousel-mobile-item"
+                    >
+                      <Image src={actividad_fisica_img} fluid></Image>
+                    </div>
+                  </Carousel.Item>
+                  <Carousel.Item>
+                    <div
+                      style={{ display: "flex", justifyContent: "center" }}
+                      className="carousel-mobile-item"
+                    >
+                      <Image src={calidad_aire_img} fluid></Image>
+                    </div>
+                  </Carousel.Item>
+                </Carousel>
               </Col>
             </Row>
           </section>
