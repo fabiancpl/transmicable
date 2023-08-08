@@ -295,7 +295,7 @@ html {
     }
 
     .cabina-transmicable {
-        min-height: 55vh !important;
+        min-height: 42vh !important;
         margin-top: -8.5% !important;
         background-size: contain !important;
         background-position: center !important;
@@ -338,7 +338,7 @@ html {
 
     .parrafo-pagina-2 {
         height: unset !important;
-        font-size: unset !important;
+        font-size: 16px !important;
     }
 
     .mountains-personaje-1 {
@@ -376,11 +376,6 @@ html {
         display: none;
     }
 
-    .carousel-mobile {
-        display: flex;
-        justify-content: center;
-    }
-
     .imagenes-resultado-trust {
         display: none;
     }
@@ -389,7 +384,13 @@ html {
         display: flex;
         justify-content: center;
         align-items: center;
-        min-height: 50vh;
+    }
+
+    .carousel-mobile-item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 300px;
     }
 
 }
@@ -495,7 +496,6 @@ html {
         justify-content: center;
         align-items: center;
         width: 500px;
-
     }
 
 }
