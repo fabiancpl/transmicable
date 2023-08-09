@@ -13,14 +13,20 @@ html {
     scroll-snap-type: y mandatory;
 }
 
-.abordaje-cabina {
+/*
+*
+*** PÁGINA 1 ***
+*
+*/
+
+.cabina-transmicable {
     display: flex;
     justify-content: center;
-    background-size: cover;
+    background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
     min-height: 62vh;
-    margin-top: -25%;
+    margin-top: -3.5%;
 }
 
 .titulo-primera-pagina {
@@ -45,15 +51,11 @@ html {
     object-fit: contain;
 }
 
-.cabina-transmicable {
-    display: flex;
-    justify-content: center;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    min-height: 62vh;
-    margin-top: -3.5%;
-}
+/*
+*
+*** PÁGINA 2 ***
+*
+*/
 
 .banner-subtitulo {
     min-height: 15vh;
@@ -69,23 +71,6 @@ html {
     color: white;
 }
 
-.mountains {
-    padding-top: 6%;
-    background-size: cover;
-    background-repeat: no-repeat;
-    display: flex;
-    justify-content: center;
-    align-items: start;
-}
-
-.mapa-transmicable {
-    min-height: 100vh;
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-    margin-top: 3%;
-}
-
 .parrafo-pagina-2 {
     text-align: justify;
     text-justify: inter-word;
@@ -95,9 +80,44 @@ html {
     font-size: 1.5em;
 }
 
-.moving-image-right {
-    animation: moveLeftToRight 15s linear infinite; /* Adjust duration and timing function as per your preference */
+.abordaje-cabina {
+    display: flex;
+    justify-content: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 62vh;
+    margin-top: -25%;
 }
+
+.mountains {
+    padding-top: 6%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+}
+
+/*
+*
+*** PÁGINA 3 ***
+*
+*/
+
+.mapa-transmicable {
+    min-height: 100vh;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-top: 3%;
+}
+
+/*
+*
+*** PÁGINA 4 ***
+*
+*/
 
 .mountains-personaje-1 {
     padding-top: 6%;
@@ -146,6 +166,12 @@ html {
     display: none;
 }
 
+/*
+*
+*** PÁGINA 5 ***
+*
+*/
+
 .banner-subtitulo-larger {
     min-height: 15vh;
     background-size: contain;
@@ -161,13 +187,40 @@ html {
     display: none;
 }
 
+.moving-image-right {
+    animation: moveLeftToRight 15s linear infinite; /* Adjust duration and timing function as per your preference */
+}
+
 .debug {
     outline: red dashed 5px;
 }
 
+/*
+*** EXTRA SMALL DEVICES ***
+ */
+
 @media (max-width: 375px) {
-    .logo-resource {
-        width: 100% !important;
+
+    /*PÁGINA 1*/
+    .cabina-transmicable {
+        min-height: 45vh !important;
+        margin-top: -8.5% !important;
+        background-size: contain !important;
+        background-position: center !important;
+        transform: translateX(12px);
+    }
+
+    .titulo-primera-pagina {
+        margin-top: 8% !important;
+        transform: translateX(12px);
+    }
+
+    .titulo-primera-pagina h1 {
+        font-size: 2em !important;
+    }
+
+    .titulo-primera-pagina h2 {
+        font-size: 1.5em !important;
     }
 
     .logo-container {
@@ -176,12 +229,24 @@ html {
         margin-bottom: 5%;
     }
 
-    .cabina-transmicable {
-        min-height: 45vh !important;
-        margin-top: -8.5% !important;
-        background-size: contain !important;
-        background-position: center !important;
-        transform: translateX(12px);
+    .logo-resource {
+        width: 100% !important;
+    }
+
+    /*PÁGINA 2*/
+    .banner-subtitulo {
+        min-height: 10vh !important;
+        transform: scaleX(-1) !important;
+        margin-right: 11%;
+    }
+
+    .texto-banner-subtitulo {
+        transform: scaleX(-1) !important;
+    }
+
+    .parrafo-pagina-2 {
+        height: 255px;
+        font-size: 13px !important;
     }
 
     .abordaje-cabina {
@@ -194,44 +259,22 @@ html {
         width: 100%;
     }
 
-    .titulo-primera-pagina {
-        margin-top: 8% !important;
-        transform: translateX(12px);
-    }
-
-    .banner-subtitulo {
-        min-height: 10vh !important;
-        transform: scaleX(-1) !important;
-        margin-right: 11%;
-    }
-
-    .texto-banner-subtitulo {
-        transform: scaleX(-1) !important;
-    }
-
-    .titulo-primera-pagina h1 {
-        font-size: 2em !important;
-    }
-
-    .titulo-primera-pagina h2 {
-        font-size: 1.5em !important;
-    }
-
+    /*PÁGINA 3*/
     .mapa-transmicable {
         background-image: url("../../assets/images/mapa_mobile.png") !important;
     }
 
-    .parrafo-pagina-2 {
-        height: 255px;
-        font-size: 13px !important;
-    }
-
+    /*PÁGINA 4*/
     .mountains-personaje-1 {
         background-image: url("../../assets/images/mountains.png") !important;
     }
 
     .audio-1 {
         display: none !important;
+    }
+
+    .bubble-1-column {
+        display: none;
     }
 
     .personaje-1-mobile {
@@ -251,20 +294,8 @@ html {
         justify-content: center;
     }
 
-    .bubble-1-column {
-        display: none;
-    }
-
+    /*PÁGINA 5*/
     .banner-subtitulo-larger {
-        display: none;
-    }
-
-    .carousel-mobile {
-        display: flex;
-        justify-content: center;
-    }
-
-    .imagenes-resultado-trust {
         display: none;
     }
 
@@ -279,21 +310,21 @@ html {
         justify-content: center;
         align-items: center;
         width: 280px;
-
     }
+
+    .imagenes-resultado-trust {
+        display: none;
+    }
+
 }
 
+/*
+*** MOBILE DEVICES ***
+ */
+
 @media (min-width: 376px) and (max-width: 430px) {
-    .logo-resource {
-        width: 100% !important;
-    }
 
-    .logo-container {
-        margin-right: 0% !important;
-        margin-left: 0% !important;
-        margin-bottom: 5%;
-    }
-
+    /*PÁGINA 1*/
     .cabina-transmicable {
         min-height: 42vh !important;
         margin-top: -8.5% !important;
@@ -302,26 +333,9 @@ html {
         transform: translateX(12px);
     }
 
-    .abordaje-cabina {
-        background-position: bottom !important;
-        background-size: contain !important;
-        background-image: url("../../assets/images/abordaje_mobile.png") !important;
-        margin-top: -50% !important;
-    }
-
     .titulo-primera-pagina {
         margin-top: 8% !important;
         transform: translateX(12px);
-    }
-
-    .banner-subtitulo {
-        min-height: 10vh !important;
-        transform: scaleX(-1) !important;
-        margin-right: 11%;
-    }
-
-    .texto-banner-subtitulo {
-        transform: scaleX(-1) !important;
     }
 
     .titulo-primera-pagina h1 {
@@ -332,8 +346,25 @@ html {
         font-size: 1.5em !important;
     }
 
-    .mapa-transmicable {
-        background-image: url("../../assets/images/mapa_mobile.png") !important;
+    .logo-container {
+        margin-right: 0% !important;
+        margin-left: 0% !important;
+        margin-bottom: 5%;
+    }
+
+    .logo-resource {
+        width: 100% !important;
+    }
+
+    /*PÁGINA 2*/
+    .banner-subtitulo {
+        min-height: 10vh !important;
+        transform: scaleX(-1) !important;
+        margin-right: 11%;
+    }
+
+    .texto-banner-subtitulo {
+        transform: scaleX(-1) !important;
     }
 
     .parrafo-pagina-2 {
@@ -341,6 +372,19 @@ html {
         font-size: 16px !important;
     }
 
+    .abordaje-cabina {
+        background-position: bottom !important;
+        background-size: contain !important;
+        background-image: url("../../assets/images/abordaje_mobile.png") !important;
+        margin-top: -50% !important;
+    }
+
+    /*PÁGINA 3*/
+    .mapa-transmicable {
+        background-image: url("../../assets/images/mapa_mobile.png") !important;
+    }
+
+    /*PÁGINA 4*/
     .mountains-personaje-1 {
         background-image: url("../../assets/images/mountains.png") !important;
         margin-top: unset !important;
@@ -349,6 +393,10 @@ html {
 
     .audio-1 {
         display: none !important;
+    }
+
+    .bubble-1-column {
+        display: none;
     }
 
     .personaje-1-mobile {
@@ -368,10 +416,7 @@ html {
         justify-content: center;
     }
 
-    .bubble-1-column {
-        display: none;
-    }
-
+    /*PÁGINA 5*/
     .banner-subtitulo-larger {
         display: none;
     }
@@ -395,7 +440,13 @@ html {
 
 }
 
+/*
+*** TABLET DEVICES ***
+ */
+
 @media (min-width: 431px) and (max-width: 1080px) {
+
+    /*PÁGINA 1*/
     .cabina-transmicable {
         min-height: 50vh !important;
         margin-top: -7.5% !important;
@@ -409,6 +460,14 @@ html {
         transform: translateX(12px);
     }
 
+    .titulo-primera-pagina h1 {
+        font-size: 3em !important;
+    }
+
+    .titulo-primera-pagina h2 {
+        font-size: 3em !important;
+    }
+
     .logo-container {
         margin-right: 0% !important;
         margin-left: 0% !important;
@@ -418,26 +477,9 @@ html {
         width: 90% !important;
     }
 
-    .abordaje-cabina {
-        background-position: bottom !important;
-        background-size: contain !important;
-        margin-top: -72% !important;
-    }
-
+    /*PÁGINA 2*/
     .banner-subtitulo {
         min-height: 8vh !important;
-    }
-
-    .titulo-primera-pagina h1 {
-        font-size: 3em !important;
-    }
-
-    .titulo-primera-pagina h2 {
-        font-size: 3em !important;
-    }
-
-    .mapa-transmicable {
-        background-image: url("../../assets/images/mapa_mobile.png") !important;
     }
 
     .parrafo-pagina-2 {
@@ -445,14 +487,29 @@ html {
         font-size: unset !important;
     }
 
+    .abordaje-cabina {
+        background-position: bottom !important;
+        background-size: contain !important;
+        margin-top: -72% !important;
+    }
+
+    /*PÁGINA 3*/
+    .mapa-transmicable {
+        background-image: url("../../assets/images/mapa_mobile.png") !important;
+    }
+
+    /*PÁGINA 4*/
     .mountains-personaje-1 {
         background-image: url("../../assets/images/mountains.png") !important;
         margin-top: unset !important;
-
     }
 
     .audio-1 {
         display: none !important;
+    }
+
+    .bubble-1-column {
+        display: none;
     }
 
     .personaje-1-mobile {
@@ -472,10 +529,7 @@ html {
         justify-content: center;
     }
 
-    .bubble-1-column {
-        display: none;
-    }
-
+    /*PÁGINA 5*/
     .banner-subtitulo-larger {
         display: none;
     }
@@ -487,15 +541,15 @@ html {
         min-height: 100vh;
     }
 
-    .imagenes-resultado-trust {
-        display: none;
-    }
-
     .carousel-mobile-item {
         display: flex;
         justify-content: center;
         align-items: center;
         width: 500px;
+    }
+
+    .imagenes-resultado-trust {
+        display: none;
     }
 
 }
