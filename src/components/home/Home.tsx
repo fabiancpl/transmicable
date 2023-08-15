@@ -53,11 +53,9 @@ function Home() {
               marginTop: "3.4%",
             }}
           ></Row>
-          <Row>
+          <Row className="justify-content-center">
             <Row
               style={{
-                display: "flex",
-                justifyContent: "center",
                 backgroundImage: `url(${nubes2})`,
                 backgroundSize: "70%",
                 backgroundRepeat: "no-repeat",
@@ -87,7 +85,7 @@ function Home() {
                     <b>
                       TRANSFORMACIONES
                       <br />
-                      URBANAS Y SALUD:
+                      URBANAS Y SALUD (TrUST):
                     </b>
                   </h1>
                   <h2 style={{ textAlign: "center", color: "#4897AB" }}>
@@ -110,293 +108,297 @@ function Home() {
                 marginBottom: "-16%",
               }}
             ></Row>
+            <Row
+              className="justify-content-center"
+              style={{
+                paddingTop: "5%",
+                paddingBottom: "5%",
+                marginBottom: "-10%",
+                display: "flex",
+                justifyContent: "center",
+              }}
+            >
+              <Col className="logo-container">
+                <Image
+                  src={salurbal}
+                  alt="Logo salurbal"
+                  className="logo-resource"
+                  fluid
+                />
+              </Col>
+              <Col className="logo-container">
+                <Image
+                  src={drexel}
+                  alt="Logo drexel university"
+                  style={{
+                    mixBlendMode: "darken",
+                  }}
+                  className="logo-resource"
+                  fluid
+                />
+              </Col>
+              <Col className="logo-container">
+                <Image
+                  src={uniandes}
+                  alt="Logo universidad de los andes"
+                  className="logo-resource"
+                  fluid
+                />
+              </Col>
+              <Col className="logo-container">
+                <Image
+                  src={uninorte}
+                  alt="Logo universidad del norte"
+                  className="logo-resource"
+                  fluid
+                />
+              </Col>
+            </Row>
           </Row>
         </section>
-        <Row
-          className="justify-content-center"
-          style={{
-            paddingTop: "6%",
-            backgroundImage: `url(${mountains})`,
-            backgroundSize: "cover",
-            backgroundRepeat: "no-repeat",
-            minHeight: "100vh",
-          }}
-        >
-          <Col className="logo-container">
-            <Image
-              src={salurbal}
-              alt="Logo salurbal"
-              className="logo-resource"
-              fluid
-            />
-          </Col>
-          <Col className="logo-container">
-            <Image
-              src={drexel}
-              alt="Logo drexel university"
-              style={{
-                mixBlendMode: "darken",
-              }}
-              className="logo-resource"
-              fluid
-            />
-          </Col>
-          <Col className="logo-container">
-            <Image
-              src={uniandes}
-              alt="Logo universidad de los andes"
-              className="logo-resource"
-              fluid
-            />
-          </Col>
-          <Col className="logo-container">
-            <Image
-              src={uninorte}
-              alt="Logo universidad del norte"
-              className="logo-resource"
-              fluid
-            />
-          </Col>
-          <section id="page2">
-            <Row
-              style={{
-                display: "flex",
-                justifyContent: "right",
-              }}
-            >
-              <Col lg={6} md={12} sm={12} xs={12}></Col>
-              <Col
-                lg={6}
-                md={6}
-                sm={12}
-                xs={12}
+        <section id="page2">
+          <Row
+            className="mountains"
+            style={{
+              backgroundImage: `url(${mountains})`,
+            }}
+          >
+            <Col>
+              <Row
                 style={{
-                  backgroundImage: `url(${banner_subtitulo})`,
+                  display: "flex",
+                  justifyContent: "right",
                 }}
-                className="banner-subtitulo"
               >
-                <h2
+                <Col lg={6} md={12} sm={12} xs={12}></Col>
+                <Col
+                  lg={6}
+                  md={6}
+                  sm={12}
+                  xs={12}
                   style={{
-                    color: "white",
+                    backgroundImage: `url(${banner_subtitulo})`,
                   }}
-                  className="texto-banner-subtitulo"
+                  className="banner-subtitulo"
                 >
-                  ¿Qué es TransMiCable?
-                </h2>
-              </Col>
-            </Row>
-            <Row style={{ marginTop: "2%" }}>
-              <Col lg={6} md={6} sm={12} xs={12}></Col>
-              <Col lg={6} md={6} sm={12} xs={12}>
-                <p className="parrafo-pagina-2">
-                  TransMiCable es el primer cable aéreo de Bogotá, el cual fue
-                  inaugurado en Ciudad Bolívar en diciembre de 2018. La línea
-                  del cable aéreo tiene 3.4 kilómetros de longitud, cuatro
-                  estaciones y 163 cabinas. Este cable beneficia a la localidad
-                  de Ciudad Bolívar en donde viven aproximadamente 600,000
-                  personas y se conecta con el sistema de transporte público de
-                  Bogotá. TransMiCable fue el principal componente de una
-                  intervención urbana integral que incluye un museo local, una
-                  biblioteca, una oficina de turismo, una oficina de atención al
-                  ciudadano, una manzana del cuidado, renovación de parques,
-                  mercados y pavimentación de vías.
-                </p>
-              </Col>
-            </Row>
-            <Row
-              style={{
-                backgroundImage: `url(${abordaje})`,
-              }}
-              className="abordaje-cabina"
-            ></Row>
-          </section>
-          <section id="page3">
-            <Row>
-              <Col
-                lg={12}
+                  <h2
+                    style={{
+                      color: "white",
+                    }}
+                    className="texto-banner-subtitulo"
+                  >
+                    ¿Qué es TransMiCable?
+                  </h2>
+                </Col>
+              </Row>
+              <Row style={{ marginTop: "2%" }}>
+                <Col lg={6} md={6} sm={12} xs={12}></Col>
+                <Col
+                  lg={6}
+                  md={6}
+                  sm={12}
+                  xs={12}
+                  className="parrafo-pagina-2-container"
+                >
+                  <p className="parrafo-pagina-2">
+                    TransMiCable es el primer cable aéreo de Bogotá, el cual fue
+                    inaugurado en Ciudad Bolívar en diciembre de 2018. La línea
+                    del cable aéreo tiene 3.4 kilómetros de longitud, cuatro
+                    estaciones y 163 cabinas. Este cable beneficia a la
+                    localidad de Ciudad Bolívar en donde viven aproximadamente
+                    600,000 personas y se conecta con el sistema de transporte
+                    público de Bogotá. TransMiCable fue el principal componente
+                    de una intervención urbana integral que incluye un museo
+                    local, una biblioteca, una oficina de turismo, una oficina
+                    de atención al ciudadano, una manzana del cuidado,
+                    renovación de parques, mercados y pavimentación de vías.
+                  </p>
+                </Col>
+              </Row>
+              <Row
                 style={{
-                  backgroundImage: `url(${mapa_desktop})`,
+                  backgroundImage: `url(${abordaje})`,
                 }}
-                className="mapa-transmicable"
-              ></Col>
-            </Row>
-          </section>
-          <section id="page4">
-            <Row
+                className="abordaje-cabina"
+              ></Row>
+            </Col>
+          </Row>
+        </section>
+        <section id="page3">
+          <Row className="mapa-transmicable-container">
+            <Col
               style={{
-                backgroundImage: `url(${mountains_personaje_1})`,
+                backgroundImage: `url(${mapa_desktop})`,
               }}
-              className="mountains-personaje-1"
-            >
-              <Col lg={6} md={12} sm={12} xs={12} className="audio-1-column">
-                <div
-                  style={{
-                    backgroundImage: `url(${
-                      isAudioPlaying1 ? playing_audio_1 : audio_1
-                    })`,
-                  }}
-                  onClick={toggleAudio1}
-                  className="audio-1"
-                ></div>
-              </Col>
-              <Col lg={6} md={12} sm={12} xs={12} className="bubble-1-column">
-                <div
-                  style={{
-                    backgroundImage: `url(${bubble_1})`,
-                  }}
-                  className="bubble-1"
-                ></div>
-              </Col>
-              <Col
-                lg={12}
-                md={12}
-                sm={12}
-                xs={12}
-                className="personaje-1-mobile-col"
-              >
-                <div
-                  style={{
-                    backgroundImage: `url(${
-                      isAudioPlaying1Mobile
-                        ? personaje_1_mobile_playing
-                        : personaje_1_mobile
-                    })`,
-                  }}
-                  onClick={toggleAudio1Mobile}
-                  className="personaje-1-mobile"
-                ></div>
-              </Col>
-            </Row>
-          </section>
-          <section id="page5">
-            <Row
-              style={{
-                display: "flex",
-                justifyContent: "right",
-              }}
-            >
-              <Col
-                lg={12}
-                md={12}
-                sm={12}
-                xs={12}
+              className="mapa-transmicable"
+            ></Col>
+          </Row>
+        </section>
+        <section id="page4">
+          <Row
+            style={{
+              backgroundImage: `url(${mountains_personaje_1})`,
+            }}
+            className="mountains-personaje-1"
+          >
+            <Col lg={6} md={12} sm={12} xs={12} className="audio-1-column">
+              <div
                 style={{
-                  backgroundImage: `url(${banner_subtitulo_large})`,
+                  backgroundImage: `url(${
+                    isAudioPlaying1 ? playing_audio_1 : audio_1
+                  })`,
                 }}
-                className="banner-subtitulo-larger"
-              >
-                <h2
-                  style={{
-                    color: "white",
-                    paddingRight: "10%",
-                  }}
-                  className="texto-banner-subtitulo"
-                >
-                  Conoce los resultados del estudio TrUST
-                </h2>
-              </Col>
-            </Row>
-            <Row
-              style={{
-                marginTop: "4%",
-                paddingBottom: "5%",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                paddingLeft: "3%",
-              }}
+                onClick={toggleAudio1}
+                className="audio-1"
+              ></div>
+            </Col>
+            <Col lg={6} md={12} sm={12} xs={12} className="bubble-1-column">
+              <div
+                style={{
+                  backgroundImage: `url(${bubble_1})`,
+                }}
+                className="bubble-1"
+              ></div>
+            </Col>
+            <Col
+              lg={12}
+              md={12}
+              sm={12}
+              xs={12}
+              className="personaje-1-mobile-col"
             >
-              <Col className="imagenes-resultado-trust">
-                <Image
-                  fluid
-                  src={transporte_img}
-                  style={{ width: "80%" }}
-                ></Image>
-              </Col>
-              <Col className="imagenes-resultado-trust">
-                <Image
-                  fluid
-                  src={seguridad_img}
-                  style={{ width: "80%" }}
-                ></Image>
-              </Col>
-              <Col className="imagenes-resultado-trust">
-                <Image
-                  fluid
-                  src={calidad_vida_img}
-                  style={{ width: "80%" }}
-                ></Image>
-              </Col>
-              <Col className="imagenes-resultado-trust">
-                <Image
-                  fluid
-                  src={actividad_fisica_img}
-                  style={{ width: "80%" }}
-                ></Image>
-              </Col>
-              <Col className="imagenes-resultado-trust">
-                <Image
-                  fluid
-                  src={calidad_aire_img}
-                  style={{ width: "80%" }}
-                ></Image>
-              </Col>
-              <Col className="carousel-mobile">
-                <Carousel
-                  slide={false}
-                  interval={null}
-                  indicators={false}
-                  style={{
-                    display: "flex",
-                    justifyContent: "center",
-                    alignItems: "center",
-                  }}
-                >
-                  <Carousel.Item>
-                    <div
-                      style={{ display: "flex", justifyContent: "center" }}
-                      className="carousel-mobile-item"
-                    >
-                      <Image src={transporte_img} fluid></Image>
-                    </div>
-                  </Carousel.Item>
-                  <Carousel.Item>
-                    <div
-                      style={{ display: "flex", justifyContent: "center" }}
-                      className="carousel-mobile-item"
-                    >
-                      <Image src={seguridad_img} fluid></Image>
-                    </div>
-                  </Carousel.Item>
-                  <Carousel.Item>
-                    <div
-                      style={{ display: "flex", justifyContent: "center" }}
-                      className="carousel-mobile-item"
-                    >
-                      <Image src={calidad_vida_img} fluid></Image>
-                    </div>
-                  </Carousel.Item>
-                  <Carousel.Item>
-                    <div
-                      style={{ display: "flex", justifyContent: "center" }}
-                      className="carousel-mobile-item"
-                    >
-                      <Image src={actividad_fisica_img} fluid></Image>
-                    </div>
-                  </Carousel.Item>
-                  <Carousel.Item>
-                    <div
-                      style={{ display: "flex", justifyContent: "center" }}
-                      className="carousel-mobile-item"
-                    >
-                      <Image src={calidad_aire_img} fluid></Image>
-                    </div>
-                  </Carousel.Item>
-                </Carousel>
-              </Col>
-            </Row>
-          </section>
-        </Row>
+              <div
+                style={{
+                  backgroundImage: `url(${
+                    isAudioPlaying1Mobile
+                      ? personaje_1_mobile_playing
+                      : personaje_1_mobile
+                  })`,
+                }}
+                onClick={toggleAudio1Mobile}
+                className="personaje-1-mobile"
+              ></div>
+            </Col>
+          </Row>
+        </section>
+        <section id="page5" style={{ marginBottom: "10%" }}>
+          <Row
+            style={{
+              display: "flex",
+              justifyContent: "right",
+              alignItems: "center",
+            }}
+          >
+            <Col
+              lg={12}
+              md={12}
+              sm={12}
+              xs={12}
+              style={{
+                backgroundImage: `url(${banner_subtitulo_large})`,
+              }}
+              className="banner-subtitulo-larger"
+            >
+              <h2
+                style={{
+                  color: "white",
+                  paddingRight: "10%",
+                }}
+                className="texto-banner-subtitulo"
+              >
+                Conoce los resultados del estudio TrUST
+              </h2>
+            </Col>
+          </Row>
+          <Row
+            style={{
+              marginTop: "4%",
+              paddingBottom: "5%",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              paddingLeft: "3%",
+              height: "90vh",
+            }}
+            className="carousel-container"
+          >
+            <Col className="imagenes-resultado-trust">
+              <Image
+                fluid
+                src={transporte_img}
+                style={{ width: "80%" }}
+              ></Image>
+            </Col>
+            <Col className="imagenes-resultado-trust">
+              <Image fluid src={seguridad_img} style={{ width: "80%" }}></Image>
+            </Col>
+            <Col className="imagenes-resultado-trust">
+              <Image
+                fluid
+                src={calidad_vida_img}
+                style={{ width: "80%" }}
+              ></Image>
+            </Col>
+            <Col className="imagenes-resultado-trust">
+              <Image
+                fluid
+                src={actividad_fisica_img}
+                style={{ width: "80%" }}
+              ></Image>
+            </Col>
+            <Col className="imagenes-resultado-trust">
+              <Image
+                fluid
+                src={calidad_aire_img}
+                style={{ width: "80%" }}
+              ></Image>
+            </Col>
+            <Col className="carousel-mobile">
+              <Carousel interval={4000} indicators={false}>
+                <Carousel.Item>
+                  <div
+                    style={{ display: "flex", justifyContent: "center" }}
+                    className="carousel-mobile-item"
+                  >
+                    <Image src={transporte_img} fluid></Image>
+                  </div>
+                </Carousel.Item>
+                <Carousel.Item>
+                  <div
+                    style={{ display: "flex", justifyContent: "center" }}
+                    className="carousel-mobile-item"
+                  >
+                    <Image src={seguridad_img} fluid></Image>
+                  </div>
+                </Carousel.Item>
+                <Carousel.Item>
+                  <div
+                    style={{ display: "flex", justifyContent: "center" }}
+                    className="carousel-mobile-item"
+                  >
+                    <Image src={calidad_vida_img} fluid></Image>
+                  </div>
+                </Carousel.Item>
+                <Carousel.Item>
+                  <div
+                    style={{ display: "flex", justifyContent: "center" }}
+                    className="carousel-mobile-item"
+                  >
+                    <Image src={actividad_fisica_img} fluid></Image>
+                  </div>
+                </Carousel.Item>
+                <Carousel.Item>
+                  <div
+                    style={{ display: "flex", justifyContent: "center" }}
+                    className="carousel-mobile-item"
+                  >
+                    <Image src={calidad_aire_img} fluid></Image>
+                  </div>
+                </Carousel.Item>
+              </Carousel>
+            </Col>
+          </Row>
+        </section>
       </Container>
     </div>
   );
