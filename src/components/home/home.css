@@ -17,7 +17,7 @@ html {
     height: 75vh;
 }
 
-#page2, #page3, #page4, #page5 {
+#page2, #page3, #page4, #page5, #page6, #page7, #page8, #page9 {
     height: 95vh;
 }
 
@@ -194,6 +194,22 @@ html {
     display: none;
 }
 
+.pagina-6-mobile {
+    display: none !important;
+}
+
+.pagina-7-mobile {
+    display: none !important;
+}
+
+.pagina-8-mobile {
+    display: none !important;
+}
+
+.pagina-9-mobile {
+    display: none !important;
+}
+
 .moving-image-right {
     animation: moveLeftToRight 15s linear infinite; /* Adjust duration and timing function as per your preference */
 }
@@ -206,6 +222,10 @@ html {
     outline: black dashed 5px;
 }
 
+.debug-aux-2 {
+    outline: darkorange dashed 5px;
+}
+
 /*
 *** EXTRA SMALL DEVICES ***
  */
@@ -216,7 +236,7 @@ html {
         height: 80vh;
     }
 
-    #page2, #page3, #page4, #page5 {
+    #page2, #page3, #page4, #page5, #page6, #page7, #page8, #page9 {
         height: 90vh;
     }
 
@@ -345,6 +365,37 @@ html {
         padding-left: unset;
     }
 
+    .pagina-6-desktop {
+        display: none !important;
+    }
+
+    .pagina-6-mobile {
+        display: unset !important;
+    }
+
+    .pagina-7-desktop {
+        display: none !important;
+    }
+
+    .pagina-7-mobile {
+        display: flex !important;
+    }
+
+    .pagina-8-desktop {
+        display: none !important;
+    }
+
+    .pagina-8-mobile {
+        display: unset !important;
+    }
+
+    .pagina-9-desktop {
+        display: none !important;
+    }
+
+    .pagina-9-mobile {
+        display: unset !important;
+    }
 }
 
 /*
@@ -357,7 +408,7 @@ html {
         height: 80vh;
     }
 
-    #page2, #page3, #page4, #page5 {
+    #page2, #page3, #page4, #page5, #page6, #page7, #page8, #page9 {
         height: 90vh;
     }
 
@@ -486,6 +537,38 @@ html {
         padding-left: unset !important;
     }
 
+    .pagina-6-desktop {
+        display: none !important;
+    }
+
+    .pagina-6-mobile {
+        display: unset !important;
+    }
+
+    .pagina-7-desktop {
+        display: none !important;
+    }
+
+    .pagina-7-mobile {
+        display: flex !important;
+    }
+
+    .pagina-8-desktop {
+        display: none !important;
+    }
+
+    .pagina-8-mobile {
+        display: unset !important;
+    }
+
+    .pagina-9-desktop {
+        display: none !important;
+    }
+
+    .pagina-9-mobile {
+        display: unset !important;
+    }
+
 }
 
 /*
@@ -498,7 +581,7 @@ html {
         height: 80vh;
     }
 
-    #page2, #page3, #page4, #page5 {
+    #page2, #page3, #page4, #page5, #page6, #page7, #page8, #page9 {
         height: 90vh;
     }
 
@@ -621,6 +704,38 @@ html {
 
     .carousel-container {
         padding-left: unset;
+    }
+
+    .pagina-6-desktop {
+        display: none !important;
+    }
+
+    .pagina-6-mobile {
+        display: unset !important;
+    }
+
+    .pagina-7-desktop {
+        display: none !important;
+    }
+
+    .pagina-7-mobile {
+        display: flex !important;
+    }
+
+    .pagina-8-desktop {
+        display: none !important;
+    }
+
+    .pagina-8-mobile {
+        display: unset !important;
+    }
+
+    .pagina-9-desktop {
+        display: none !important;
+    }
+
+    .pagina-9-mobile {
+        display: unset !important;
     }
 
 }
