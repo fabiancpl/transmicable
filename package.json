@@ -11,6 +11,9 @@
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
+    "@mui/material": "^5.14.7",
     "bootstrap": "^5.3.1",
     "framer-motion": "^10.13.1",
     "hamburger-react": "^2.5.0",

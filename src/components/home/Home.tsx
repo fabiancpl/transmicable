@@ -65,8 +65,62 @@ import audio2_src from "../../assets/audios/Audio2_Ana.wav";
 import audio3_src from "../../assets/audios/Audio3_Maria.wav";
 import audio4_src from "../../assets/audios/Audio4_Ana.wav";
 import audio5_src from "../../assets/audios/Audio5_Maria.wav";
+import audio6_src from "../../assets/audios/Audio6_Ana.wav";
+import audio7_src from "../../assets/audios/Audio 7_Maria.wav";
+import audio8_src from "../../assets/audios/Audio8_Ana.wav";
+import audio9_src from "../../assets/audios/Audio9_Maria.wav";
+import audio10_src from "../../assets/audios/Audio10_Ana.wav";
+import audio11_src from "../../assets/audios/Audio11_Maria.wav";
+import {
+  FormControl,
+  InputLabel,
+  MenuItem,
+  Select,
+  SelectChangeEvent,
+} from "@mui/material";
 
 function Home() {
+  const audioGroup: string[] = [audio4_src, audio5_src];
+  const audioGroup2: string[] = [audio6_src, audio7_src];
+  const audioGroup3: string[] = [audio8_src, audio9_src];
+  const audioGroup4: string[] = [audio10_src, audio11_src];
+
+  const [audioSelectIndex, setAudioIndex] = React.useState("");
+
+  const handleChange = (event: SelectChangeEvent) => {
+    setAudioIndex(event.target.value);
+    if (isAudioPlaying4) {
+      toggleAudio4();
+    }
+  };
+
+  const [audioSelectIndex2, setAudioIndex2] = React.useState("");
+
+  const handleChange2 = (event: SelectChangeEvent) => {
+    setAudioIndex2(event.target.value);
+    if (isAudioPlaying5) {
+      toggleAudio5();
+    }
+  };
+
+  const [audioSelectIndex3, setAudioIndex3] = React.useState("");
+
+  const handleChange3 = (event: SelectChangeEvent) => {
+    setAudioIndex3(event.target.value);
+    if (isAudioPlaying6) {
+      toggleAudio6();
+    }
+  };
+
+  const [audioSelectIndex4, setAudioIndex4] = React.useState("");
+
+  const handleChange4 = (event: SelectChangeEvent) => {
+    setAudioIndex4(event.target.value);
+    if (isAudioPlaying7) {
+      toggleAudio7();
+    }
+  };
+
   const [isAudioPlaying1, setIsAudioPlaying1] = useState(false);
   const audio1_ref = React.useRef<HTMLAudioElement | null>(null);
   const toggleAudio1 = () => {
@@ -129,6 +183,32 @@ function Home() {
         audio5_ref.current.pause();
       }
       setIsAudioPlaying5((prevIsAudioPlaying) => !prevIsAudioPlaying);
+    }
+  };
+
+  const [isAudioPlaying6, setIsAudioPlaying6] = useState(false);
+  const audio6_ref = React.useRef<HTMLAudioElement | null>(null);
+  const toggleAudio6 = () => {
+    if (audio6_ref.current) {
+      if (!isAudioPlaying6) {
+        audio6_ref.current.play();
+      } else {
+        audio6_ref.current.pause();
+      }
+      setIsAudioPlaying6((prevIsAudioPlaying) => !prevIsAudioPlaying);
+    }
+  };
+
+  const [isAudioPlaying7, setIsAudioPlaying7] = useState(false);
+  const audio7_ref = React.useRef<HTMLAudioElement | null>(null);
+  const toggleAudio7 = () => {
+    if (audio7_ref.current) {
+      if (!isAudioPlaying7) {
+        audio7_ref.current.play();
+      } else {
+        audio7_ref.current.pause();
+      }
+      setIsAudioPlaying7((prevIsAudioPlaying) => !prevIsAudioPlaying);
     }
   };
 
@@ -662,8 +742,7 @@ function Home() {
                     fontSize: "1.35rem",
                   }}
                 >
-                  TransMiCable nos facilita la movilidad - TransMiCable nos
-                  facilitia la movilidad
+                  TransMiCable nos facilita la movilidad
                 </h2>
               </Col>
             </Row>
@@ -1097,8 +1176,7 @@ function Home() {
                     fontSize: "1.35rem",
                   }}
                 >
-                  TransMiCable nos proporciona un aire mas limpio - TransMiCable
-                  nos proporciona un aire más limpio
+                  TransMiCable nos proporciona un aire mas limpio
                 </h2>
               </Col>
             </Row>
@@ -1150,9 +1228,9 @@ function Home() {
                       fontFamily: "D-DIN",
                     }}
                   >
-                    Las concentraciones de hollín son bajas (2.5 microgramos/m3)
-                    dentro de las cabinas del TransMiCable en comparación con
-                    los buses alimentadores y de TransMilenio.
+                    Las concentraciones de hollín por viaje son 34% más bajas
+                    usando el TransMiCable en comparación con el uso de los
+                    buses alimentadores.
                   </h5>
                 </Row>
                 <Row style={{ height: "80%", alignItems: "center" }}>
@@ -1168,7 +1246,28 @@ function Home() {
                 </Row>
               </Col>
               <Col lg={4} md={4} sm={4} xs={4}>
-                <Row style={{ height: "100%" }}>
+                <Row style={{ height: "15%" }}>
+                  <FormControl fullWidth>
+                    <InputLabel
+                      id="audio-group-4-5"
+                      style={{ color: "#32677F" }}
+                    >
+                      Escoge tu audio
+                    </InputLabel>
+                    <Select
+                      labelId="audio-group-4-5-label"
+                      id="audio-group-4-5-select"
+                      value={audioSelectIndex}
+                      label="Escoge tu audio"
+                      onChange={handleChange}
+                      style={{ color: "#32677F" }}
+                    >
+                      <MenuItem value={0}>Audio Ana</MenuItem>
+                      <MenuItem value={1}>Audio Maria</MenuItem>
+                    </Select>
+                  </FormControl>
+                </Row>
+                <Row style={{ height: "85%" }}>
                   <Col
                     style={{
                       backgroundImage: `url(${
@@ -1182,7 +1281,7 @@ function Home() {
                   >
                     <audio
                       ref={audio4_ref}
-                      src={audio4_src}
+                      src={audioGroup[+audioSelectIndex]}
                       style={{ display: "none" }}
                     ></audio>
                   </Col>
@@ -1282,8 +1381,7 @@ function Home() {
                     fontSize: "1.35rem",
                   }}
                 >
-                  Con TransMiCable disminuyo la inseguridad - Con TransMiCable
-                  disminuyo la inseguridad
+                  Con TransMiCable disminuyo la inseguridad
                 </h2>
               </Col>
             </Row>
@@ -1340,7 +1438,7 @@ function Home() {
                 </Row>
               </Col>
               <Col lg={4} md={4} sm={4} xs={4}>
-                <Row style={{ height: "100%" }}>
+                <Row style={{ height: "85%" }}>
                   <Col
                     style={{
                       backgroundImage: `url(${
@@ -1354,10 +1452,31 @@ function Home() {
                   >
                     <audio
                       ref={audio5_ref}
-                      src={audio5_src}
+                      src={audioGroup2[+audioSelectIndex2]}
                       style={{ display: "none" }}
                     ></audio>
                   </Col>
+                </Row>
+                <Row style={{ height: "15%" }}>
+                  <FormControl fullWidth>
+                    <InputLabel
+                      id="audio-group-6-7"
+                      style={{ color: "#32677F" }}
+                    >
+                      Escoge tu audio
+                    </InputLabel>
+                    <Select
+                      labelId="audio-group-6-7-label"
+                      id="audio-group-6-7-select"
+                      value={audioSelectIndex2}
+                      label="Escoge tu audio"
+                      onChange={handleChange2}
+                      style={{ color: "#32677F" }}
+                    >
+                      <MenuItem value={0}>Audio Ana</MenuItem>
+                      <MenuItem value={1}>Audio Maria</MenuItem>
+                    </Select>
+                  </FormControl>
                 </Row>
               </Col>
             </Row>
@@ -1398,7 +1517,6 @@ function Home() {
                     backgroundPosition: "center",
                     backgroundRepeat: "no-repeat",
                   }}
-                  onClick={toggleAudio3}
                 ></Col>
               </Row>
               <Row style={{ height: "15%" }}>
@@ -1428,7 +1546,7 @@ function Home() {
               >
                 <audio
                   ref={audio5_ref}
-                  src={audio5_src}
+                  src={audioGroup2[+audioSelectIndex2]}
                   style={{ display: "none" }}
                 ></audio>
               </Row>
@@ -1530,11 +1648,32 @@ function Home() {
                 </Row>
               </Col>
               <Col lg={4} md={4} sm={4} xs={4}>
+                <Row style={{ height: "15%" }}>
+                  <FormControl fullWidth>
+                    <InputLabel
+                      id="audio-group-7-8"
+                      style={{ color: "#32677F" }}
+                    >
+                      Escoge tu audio
+                    </InputLabel>
+                    <Select
+                      labelId="audio-group-7-8-label"
+                      id="audio-group-7-8-select"
+                      value={audioSelectIndex3}
+                      label="Escoge tu audio"
+                      onChange={handleChange3}
+                      style={{ color: "#32677F" }}
+                    >
+                      <MenuItem value={0}>Audio Ana</MenuItem>
+                      <MenuItem value={1}>Audio Maria</MenuItem>
+                    </Select>
+                  </FormControl>
+                </Row>
                 <Row style={{ height: "25%" }}>
                   <Col
                     style={{
                       backgroundImage: `url(${
-                        !isAudioPlaying3
+                        !isAudioPlaying6
                           ? audio_controls
                           : audio_controls_playing
                       })`,
@@ -1542,16 +1681,16 @@ function Home() {
                       backgroundRepeat: "no-repeat",
                       backgroundPosition: "center",
                     }}
-                    onClick={toggleAudio3}
+                    onClick={toggleAudio6}
                   >
                     <audio
-                      ref={audio3_ref}
-                      src={audio3_src}
+                      ref={audio6_ref}
+                      src={audioGroup3[+audioSelectIndex3]}
                       style={{ display: "none" }}
                     ></audio>
                   </Col>
                 </Row>
-                <Row style={{ height: "75%" }}>
+                <Row style={{ height: "60%" }}>
                   <Col
                     style={{
                       backgroundImage: `url(${detalle_grafica_5})`,
@@ -1614,7 +1753,7 @@ function Home() {
                     backgroundPosition: "25% center",
                     backgroundRepeat: "no-repeat",
                   }}
-                  onClick={toggleAudio3}
+                  onClick={toggleAudio6}
                 ></Col>
               </Row>
               <Row
@@ -1658,8 +1797,7 @@ function Home() {
                     fontSize: "1.35rem",
                   }}
                 >
-                  TransMiCable nos facilita la movilidad - TransMiCable nos
-                  facilitia la movilidad
+                  TransMiCable nos facilita la movilidad
                 </h2>
               </Col>
             </Row>
@@ -1727,21 +1865,42 @@ function Home() {
                 </Row>
                 <Row
                   style={{
-                    height: "12%",
+                    height: "25%",
                     backgroundImage: `url(${
-                      !isAudioPlaying5 ? audio_controls : audio_controls_playing
+                      !isAudioPlaying7 ? audio_controls : audio_controls_playing
                     })`,
                     backgroundSize: "50%",
                     backgroundRepeat: "no-repeat",
                     backgroundPosition: "center",
                   }}
-                  onClick={toggleAudio5}
+                  onClick={toggleAudio7}
                 >
                   <audio
-                    ref={audio5_ref}
-                    src={audio5_src}
+                    ref={audio7_ref}
+                    src={audioGroup4[+audioSelectIndex4]}
                     style={{ display: "none" }}
                   ></audio>
+                </Row>
+                <Row style={{ height: "10%", justifyContent: "center" }}>
+                  <FormControl style={{ width: "60%" }}>
+                    <InputLabel
+                      id="audio-group-10-11"
+                      style={{ color: "#32677F" }}
+                    >
+                      Escoge tu audio
+                    </InputLabel>
+                    <Select
+                      labelId="audio-group-10-11-label"
+                      id="audio-group-10-11-select"
+                      value={audioSelectIndex4}
+                      label="Escoge tu audio"
+                      onChange={handleChange4}
+                      style={{ color: "#32677F" }}
+                    >
+                      <MenuItem value={0}>Audio Ana</MenuItem>
+                      <MenuItem value={1}>Audio Maria</MenuItem>
+                    </Select>
+                  </FormControl>
                 </Row>
               </Col>
               <Col lg={4} md={4} sm={4} xs={4}>
@@ -1851,7 +2010,7 @@ function Home() {
                   backgroundPosition: "center",
                   marginTop: "5%",
                 }}
-                onClick={toggleAudio5}
+                onClick={toggleAudio7}
               ></Row>
             </Col>
           </Row>
