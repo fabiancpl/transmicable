@@ -1,8 +1,41 @@
+@font-face {
+    font-family: 'Lemon-Milk';
+    src: url("../../assets/fonts/LEMONMILK-Regular.otf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Futura';
+    src: url("../../assets/fonts/futur.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'D-DIN';
+    src: url("../../assets/fonts/D-DIN.otf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Led';
+    src: url("../../assets/fonts/led_8x6.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+
 .main-content {
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: #b7d4dc;
+}
+
+::-webkit-scrollbar {
+    display: none;
 }
 
 section {
@@ -17,8 +50,28 @@ html {
     height: 75vh;
 }
 
-#page2, #page3, #page4, #page5, #page6, #page7, #page8, #page9 {
+#page2, #page3, #page4, #page5, #page6, #page7, #page8, #page9, #page10, #page11, #page12 {
     height: 95vh;
+}
+
+#page12 {
+    scroll-snap-type: none !important;
+}
+
+.carousel .carousel-indicators button {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+}
+
+.carousel .carousel-caption {
+    margin-bottom: -48px;
+}
+
+.carousel .carousel-control-next-icon.modified {
+    background-image: none;
 }
 
 /*
@@ -26,7 +79,6 @@ html {
 *** PAGINA 1 ***
 *
 */
-
 .cabina-transmicable {
     background-size: contain;
     background-repeat: no-repeat;
@@ -45,6 +97,7 @@ html {
 .logo-container {
     display: flex;
     justify-content: center;
+    align-content: center;
     width: 200px;
     height: 100px;
     margin-right: 3%;
@@ -87,6 +140,7 @@ html {
     text-justify: inter-word;
     color: #32677F;
     width: 30vw;
+    font-family: D-DIN;
 }
 
 .abordaje-cabina {
@@ -210,6 +264,14 @@ html {
     display: none !important;
 }
 
+.pagina-10-mobile {
+    display: none !important;
+}
+
+.pagina-11-mobile {
+    display: none !important;
+}
+
 .moving-image-right {
     animation: moveLeftToRight 15s linear infinite; /* Adjust duration and timing function as per your preference */
 }
@@ -236,7 +298,7 @@ html {
         height: 80vh;
     }
 
-    #page2, #page3, #page4, #page5, #page6, #page7, #page8, #page9 {
+    #page2, #page3, #page4, #page5, #page6, #page7, #page8, #page9, #page10, #page11 {
         height: 90vh;
     }
 
@@ -348,6 +410,7 @@ html {
         display: flex;
         justify-content: center;
         align-items: center;
+        height: 110%;
     }
 
     .carousel-mobile-item {
@@ -396,6 +459,23 @@ html {
     .pagina-9-mobile {
         display: unset !important;
     }
+
+    .pagina-10-desktop {
+        display: none !important;
+    }
+
+    .pagina-10-mobile {
+        display: unset !important;
+    }
+
+    .pagina-11-desktop {
+        display: none !important;
+    }
+
+    .pagina-11-mobile {
+        display: unset !important;
+    }
+
 }
 
 /*
@@ -408,7 +488,7 @@ html {
         height: 80vh;
     }
 
-    #page2, #page3, #page4, #page5, #page6, #page7, #page8, #page9 {
+    #page2, #page3, #page4, #page5, #page6, #page7, #page8, #page9, #page10, #page11 {
         height: 90vh;
     }
 
@@ -524,13 +604,14 @@ html {
     .carousel-mobile {
         display: flex;
         justify-content: center;
+        height: 90%;
     }
 
     .carousel-mobile-item {
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 60vw;
+        width: 75vw;
     }
 
     .carousel-container {
@@ -569,6 +650,21 @@ html {
         display: unset !important;
     }
 
+    .pagina-10-desktop {
+        display: none !important;
+    }
+
+    .pagina-10-mobile {
+        display: unset !important;
+    }
+
+    .pagina-11-desktop {
+        display: none !important;
+    }
+
+    .pagina-11-mobile {
+        display: unset !important;
+    }
 }
 
 /*
@@ -581,7 +677,7 @@ html {
         height: 80vh;
     }
 
-    #page2, #page3, #page4, #page5, #page6, #page7, #page8, #page9 {
+    #page2, #page3, #page4, #page5, #page6, #page7, #page8, #page9, #page10, #page11 {
         height: 90vh;
     }
 
@@ -738,6 +834,21 @@ html {
         display: unset !important;
     }
 
+    .pagina-10-desktop {
+        display: none !important;
+    }
+
+    .pagina-10-mobile {
+        display: unset !important;
+    }
+
+    .pagina-11-desktop {
+        display: none !important;
+    }
+
+    .pagina-11-mobile {
+        display: unset !important;
+    }
 }
 
 @keyframes moveLeftToRight {

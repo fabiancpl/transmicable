@@ -25,6 +25,11 @@ import seguridad_img from "../../assets/images/seguridad_img.png";
 import calidad_vida_img from "../../assets/images/calidad_img.png";
 import actividad_fisica_img from "../../assets/images/actividad_fisica_img.png";
 import calidad_aire_img from "../../assets/images/calidad_aire_img.png";
+import transporte_img_desktop from "../../assets/images/transporte_img_desktop.png";
+import seguridad_img_desktop from "../../assets/images/seguridad_img_desktop.png";
+import calidad_vida_img_desktop from "../../assets/images/calidad_img_desktop.png";
+import actividad_fisica_img_desktop from "../../assets/images/actividad_fisica_img_desktop.png";
+import calidad_aire_img_desktop from "../../assets/images/calidad_aire_img_desktop.png";
 import React, { useState } from "react";
 import banner_electronico from "../../assets/images/banner_electronico.png";
 import grafica_1 from "../../assets/images/grafica_1.png";
@@ -50,6 +55,9 @@ import audio_5_playing from "../../assets/images/audio_5_playing.png";
 import personaje_3_mobile from "../../assets/images/personaje_3_mobile.png";
 import personaje_3_mobile_playing from "../../assets/images/personaje_3_mobile_playing.png";
 import cuadro_mobile from "../../assets/images/cuadro_mobile.png";
+import grafica_5 from "../../assets/images/grafica_5.png";
+import detalle_grafica_5 from "../../assets/images/detalle_grafica_5.png";
+import grafica_6 from "../../assets/images/grafica_6.png";
 
 //Audios
 import audio1_src from "../../assets/audios/Audio1_Ana.wav";
@@ -165,14 +173,26 @@ function Home() {
                 className="titulo-primera-pagina"
               >
                 <div>
-                  <h1 style={{ textAlign: "center", color: "#E34339" }}>
+                  <h1
+                    style={{
+                      textAlign: "center",
+                      color: "#E34339",
+                      fontFamily: "Lemon-Milk",
+                    }}
+                  >
                     <b>
                       TRANSFORMACIONES
                       <br />
                       URBANAS Y SALUD (TrUST):
                     </b>
                   </h1>
-                  <h2 style={{ textAlign: "center", color: "#4897AB" }}>
+                  <h2
+                    style={{
+                      textAlign: "center",
+                      color: "#4897AB",
+                      fontFamily: "Futura",
+                    }}
+                  >
                     Resultados de la evaluación
                     <br />
                     del TransMiCable
@@ -268,6 +288,7 @@ function Home() {
                   <h2
                     style={{
                       color: "white",
+                      fontFamily: "Futura",
                     }}
                     className="texto-banner-subtitulo"
                   >
@@ -399,6 +420,7 @@ function Home() {
                 style={{
                   color: "white",
                   paddingRight: "10%",
+                  fontFamily: "Futura",
                 }}
                 className="texto-banner-subtitulo"
               >
@@ -420,36 +442,54 @@ function Home() {
             <Col className="imagenes-resultado-trust">
               <Image
                 fluid
-                src={transporte_img}
-                style={{ width: "80%" }}
-              ></Image>
-            </Col>
-            <Col className="imagenes-resultado-trust">
-              <Image fluid src={seguridad_img} style={{ width: "80%" }}></Image>
-            </Col>
-            <Col className="imagenes-resultado-trust">
-              <Image
-                fluid
-                src={calidad_vida_img}
+                src={transporte_img_desktop}
                 style={{ width: "80%" }}
               ></Image>
             </Col>
             <Col className="imagenes-resultado-trust">
               <Image
                 fluid
-                src={actividad_fisica_img}
+                src={seguridad_img_desktop}
                 style={{ width: "80%" }}
               ></Image>
             </Col>
             <Col className="imagenes-resultado-trust">
               <Image
                 fluid
-                src={calidad_aire_img}
+                src={calidad_vida_img_desktop}
+                style={{ width: "80%" }}
+              ></Image>
+            </Col>
+            <Col className="imagenes-resultado-trust">
+              <Image
+                fluid
+                src={actividad_fisica_img_desktop}
+                style={{ width: "80%" }}
+              ></Image>
+            </Col>
+            <Col className="imagenes-resultado-trust">
+              <Image
+                fluid
+                src={calidad_aire_img_desktop}
                 style={{ width: "80%" }}
               ></Image>
             </Col>
             <Col className="carousel-mobile">
-              <Carousel interval={4000} indicators={false}>
+              <Carousel
+                interval={4000}
+                nextIcon={
+                  <span
+                    aria-hidden="true"
+                    className="carousel-control-next-icon modified"
+                  />
+                }
+                prevIcon={
+                  <span
+                    aria-hidden="true"
+                    className="carousel-control-next-icon modified"
+                  />
+                }
+              >
                 <Carousel.Item>
                   <div
                     style={{ display: "flex", justifyContent: "center" }}
@@ -457,7 +497,24 @@ function Home() {
                   >
                     <Image src={transporte_img} fluid></Image>
                   </div>
+                  <Carousel.Caption>
+                    <b>
+                      <h1
+                        style={{
+                          color: "white",
+                          backgroundColor: "#32667E",
+                          padding: "1rem",
+                          borderRadius: "30px",
+                          fontFamily: "Lemon-Milk",
+                          fontSize: "1.5rem",
+                        }}
+                      >
+                        TRANSPORTE
+                      </h1>
+                    </b>
+                  </Carousel.Caption>
                 </Carousel.Item>
+
                 <Carousel.Item>
                   <div
                     style={{ display: "flex", justifyContent: "center" }}
@@ -465,6 +522,22 @@ function Home() {
                   >
                     <Image src={seguridad_img} fluid></Image>
                   </div>
+                  <Carousel.Caption>
+                    <b>
+                      <h1
+                        style={{
+                          color: "white",
+                          backgroundColor: "#32667E",
+                          padding: "1rem",
+                          borderRadius: "30px",
+                          fontFamily: "Lemon-Milk",
+                          fontSize: "1.5rem",
+                        }}
+                      >
+                        SEGURIDAD
+                      </h1>
+                    </b>
+                  </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
                   <div
@@ -473,6 +546,24 @@ function Home() {
                   >
                     <Image src={calidad_vida_img} fluid></Image>
                   </div>
+                  <Carousel.Caption>
+                    <b>
+                      <h1
+                        style={{
+                          color: "white",
+                          backgroundColor: "#32667E",
+                          padding: "1rem",
+                          borderRadius: "30px",
+                          fontFamily: "Lemon-Milk",
+                          fontSize: "1.5rem",
+                        }}
+                      >
+                        CALIDAD
+                        <br />
+                        DE VIDA
+                      </h1>
+                    </b>
+                  </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
                   <div
@@ -481,6 +572,24 @@ function Home() {
                   >
                     <Image src={actividad_fisica_img} fluid></Image>
                   </div>
+                  <Carousel.Caption>
+                    <b>
+                      <h1
+                        style={{
+                          color: "white",
+                          backgroundColor: "#32667E",
+                          padding: "1rem",
+                          borderRadius: "30px",
+                          fontFamily: "Lemon-Milk",
+                          fontSize: "1.5rem",
+                        }}
+                      >
+                        ACTIVIDAD
+                        <br />
+                        FÍSICA
+                      </h1>
+                    </b>
+                  </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
                   <div
@@ -489,6 +598,24 @@ function Home() {
                   >
                     <Image src={calidad_aire_img} fluid></Image>
                   </div>
+                  <Carousel.Caption>
+                    <b>
+                      <h1
+                        style={{
+                          color: "white",
+                          backgroundColor: "#32667E",
+                          padding: "1rem",
+                          borderRadius: "30px",
+                          fontFamily: "Lemon-Milk",
+                          fontSize: "1.5rem",
+                        }}
+                      >
+                        CALIDAD
+                        <br />
+                        DEL AIRE
+                      </h1>
+                    </b>
+                  </Carousel.Caption>
                 </Carousel.Item>
               </Carousel>
             </Col>
@@ -528,7 +655,13 @@ function Home() {
                   justifyContent: "center",
                 }}
               >
-                <h2 style={{ color: "#EEBE94" }}>
+                <h2
+                  style={{
+                    color: "#EEBE94",
+                    fontFamily: "Led",
+                    fontSize: "1.35rem",
+                  }}
+                >
                   TransMiCable nos facilita la movilidad - TransMiCable nos
                   facilitia la movilidad
                 </h2>
@@ -536,15 +669,44 @@ function Home() {
             </Row>
             <Row style={{ height: "88%" }}>
               <Col
-                lg={2}
-                md={2}
+                lg={1}
+                md={1}
                 sm={12}
                 xs={12}
-                style={{ height: "100%" }}
+                style={{
+                  height: "100%",
+                  justifyContent: "left",
+                  display: "flex",
+                }}
+              >
+                <div
+                  style={{
+                    height: "100%",
+                    width: "100%",
+                    borderRight: "5px dashed #F19B48",
+                  }}
+                ></div>
+              </Col>
+              <Col
+                lg={1}
+                md={1}
+                sm={12}
+                xs={12}
+                style={{
+                  height: "100%",
+                  justifyContent: "left",
+                  display: "flex",
+                }}
               ></Col>
               <Col lg={6} md={6} sm={12} xs={12}>
                 <Row style={{ height: "15%", alignItems: "center" }}>
-                  <h5 style={{ textAlign: "center", color: "#32677F" }}>
+                  <h5
+                    style={{
+                      textAlign: "center",
+                      color: "#32677F",
+                      fontFamily: "D-DIN",
+                    }}
+                  >
                     El tiempo promedio de viaje en Ciudad Bolívar disminuyó en
                     20 minutos un año despúes de la implementación del
                     TransMiCable
@@ -681,13 +843,42 @@ function Home() {
                   height: "100%",
                 }}
               >
-                <h2 style={{ color: "white" }}>
+                <h2 style={{ color: "white", fontFamily: "Futura" }}>
                   <b>En Ciudad Bolivar</b>
                 </h2>
               </div>
             </Row>
             <Row style={{ height: "70%" }}>
-              <Col lg={2} md={2} sm={12} xs={12}></Col>
+              <Col
+                lg={1}
+                md={1}
+                sm={12}
+                xs={12}
+                style={{
+                  height: "100%",
+                  justifyContent: "left",
+                  display: "flex",
+                }}
+              >
+                <div
+                  style={{
+                    height: "100%",
+                    width: "100%",
+                    borderRight: "5px dashed #F19B48",
+                  }}
+                ></div>
+              </Col>
+              <Col
+                lg={1}
+                md={1}
+                sm={12}
+                xs={12}
+                style={{
+                  height: "100%",
+                  justifyContent: "left",
+                  display: "flex",
+                }}
+              ></Col>
               <Col lg={6} md={6} sm={12} xs={12}>
                 <Row style={{ height: "15%", alignItems: "left" }}></Row>
                 <Row style={{ height: "35%", alignItems: "left" }}>
@@ -700,7 +891,13 @@ function Home() {
                     }}
                   >
                     <img src={icono_bullet} />
-                    <p style={{ marginLeft: "5%", color: "#32677F" }}>
+                    <p
+                      style={{
+                        marginLeft: "5%",
+                        color: "#32677F",
+                        fontFamily: "D-DIN",
+                      }}
+                    >
                       La satisfacción con el transporte público aumentó 36%
                       desde la implementación del TransMiCable.
                     </p>
@@ -716,7 +913,13 @@ function Home() {
                     }}
                   >
                     <img src={icono_bullet} />
-                    <p style={{ marginLeft: "5%", color: "#32677F" }}>
+                    <p
+                      style={{
+                        marginLeft: "5%",
+                        color: "#32677F",
+                        fontFamily: "D-DIN",
+                      }}
+                    >
                       La satisfacción con TransMicable es de 9/10 puntos.
                     </p>
                   </div>
@@ -794,7 +997,13 @@ function Home() {
                   }}
                 >
                   <img src={icono_bullet} style={{ width: "15%" }} />
-                  <p style={{ marginLeft: "5%", color: "#32677F" }}>
+                  <p
+                    style={{
+                      marginLeft: "5%",
+                      color: "#32677F",
+                      fontFamily: "D-DIN",
+                    }}
+                  >
                     La satisfacción con el transporte público aumentó 36% desde
                     la implementación del TransMiCable.
                   </p>
@@ -807,7 +1016,13 @@ function Home() {
                   }}
                 >
                   <img src={icono_bullet} style={{ width: "15%" }} />
-                  <p style={{ marginLeft: "5%", color: "#32677F" }}>
+                  <p
+                    style={{
+                      marginLeft: "5%",
+                      color: "#32677F",
+                      fontFamily: "D-DIN",
+                    }}
+                  >
                     La satisfacción con TransMicable es de 9/10 puntos.
                   </p>
                 </div>
@@ -872,16 +1087,52 @@ function Home() {
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "center",
+                  overflow: "hidden",
                 }}
               >
-                <h2 style={{ color: "#EEBE94" }}>
-                  TransMiCable nos facilita la movilidad - TransMiCable nos
-                  facilitia la movilidad
+                <h2
+                  style={{
+                    color: "#EEBE94",
+                    fontFamily: "Led",
+                    fontSize: "1.35rem",
+                  }}
+                >
+                  TransMiCable nos proporciona un aire mas limpio - TransMiCable
+                  nos proporciona un aire más limpio
                 </h2>
               </Col>
             </Row>
-            <Row style={{ minHeight: "85%" }}>
-              <Col lg={2} md={2} sm={2} xs={2}></Col>
+            <Row style={{ height: "85%" }}>
+              <Col
+                lg={1}
+                md={1}
+                sm={12}
+                xs={12}
+                style={{
+                  height: "100%",
+                  justifyContent: "left",
+                  display: "flex",
+                }}
+              >
+                <div
+                  style={{
+                    height: "100%",
+                    width: "100%",
+                    borderRight: "5px dashed #F19B48",
+                  }}
+                ></div>
+              </Col>
+              <Col
+                lg={1}
+                md={1}
+                sm={12}
+                xs={12}
+                style={{
+                  height: "100%",
+                  justifyContent: "left",
+                  display: "flex",
+                }}
+              ></Col>
               <Col lg={6} md={6} sm={12} xs={12}>
                 <Row
                   style={{
@@ -891,17 +1142,18 @@ function Home() {
                     justifyContent: "center",
                   }}
                 >
-                  <p
+                  <h5
                     style={{
                       width: "70%",
                       textAlign: "center",
                       color: "#32677F",
+                      fontFamily: "D-DIN",
                     }}
                   >
                     Las concentraciones de hollín son bajas (2.5 microgramos/m3)
                     dentro de las cabinas del TransMiCable en comparación con
                     los buses alimentadores y de TransMilenio.
-                  </p>
+                  </h5>
                 </Row>
                 <Row style={{ height: "80%", alignItems: "center" }}>
                   <Col
@@ -1023,14 +1275,36 @@ function Home() {
                   justifyContent: "center",
                 }}
               >
-                <h2 style={{ color: "#EEBE94" }}>
-                  TransMiCable nos facilita la movilidad - TransMiCable nos
-                  facilitia la movilidad
+                <h2
+                  style={{
+                    color: "#EEBE94",
+                    fontFamily: "Led",
+                    fontSize: "1.35rem",
+                  }}
+                >
+                  Con TransMiCable disminuyo la inseguridad - Con TransMiCable
+                  disminuyo la inseguridad
                 </h2>
               </Col>
             </Row>
-            <Row style={{ minHeight: "85%" }}>
-              <Col lg={1} md={1} sm={1} xs={1}></Col>
+            <Row style={{ height: "85%" }}>
+              <Col
+                lg={1}
+                md={1}
+                style={{
+                  height: "100%",
+                  justifyContent: "center",
+                  display: "flex",
+                }}
+              >
+                <div
+                  style={{
+                    height: "100%",
+                    width: "100%",
+                    borderRight: "5px dashed #F19B48",
+                  }}
+                ></div>
+              </Col>
               <Col lg={6} md={6} sm={12} xs={12}>
                 <Row
                   style={{
@@ -1040,17 +1314,18 @@ function Home() {
                     justifyContent: "center",
                   }}
                 >
-                  <p
+                  <h5
                     style={{
                       width: "70%",
                       textAlign: "center",
                       color: "#32677F",
+                      fontFamily: "D-DIN",
                     }}
                   >
                     Después de la implementación del TransMiCable en Ciudad
                     Bolívar disminuyó la percepción de inseguridad y la
                     victimización (hogares víctimas de hurto y robo).
-                  </p>
+                  </h5>
                 </Row>
                 <Row style={{ height: "80%", alignItems: "center" }}>
                   <Col
@@ -1095,7 +1370,7 @@ function Home() {
             }}
             className="pagina-9-mobile"
           >
-            <Col style={{ height: "100%", marginTop: "-15%" }}>
+            <Col style={{ height: "100%" }}>
               <Row
                 style={{
                   minHeight: "6vh",
@@ -1112,14 +1387,14 @@ function Home() {
               </Row>
               <Row
                 style={{
-                  height: "35%",
+                  height: "30%",
                   justifyContent: "right",
                 }}
               >
                 <Col
                   style={{
                     backgroundImage: `url(${cuadro_mobile})`,
-                    backgroundSize: "70%",
+                    backgroundSize: "60%",
                     backgroundPosition: "center",
                     backgroundRepeat: "no-repeat",
                   }}
@@ -1127,7 +1402,13 @@ function Home() {
                 ></Col>
               </Row>
               <Row style={{ height: "15%" }}>
-                <p style={{ textAlign: "center", color: "#32677F" }}>
+                <p
+                  style={{
+                    textAlign: "center",
+                    color: "#32677F",
+                    fontFamily: "D-DIN",
+                  }}
+                >
                   Después de la implementación del TransMiCable en Ciudad
                   Bolívar disminuyó la percepción de inseguridad y la
                   victimización (hogares víctimas de hurto y robo).
@@ -1160,6 +1441,874 @@ function Home() {
                   backgroundPosition: "center",
                 }}
               ></Row>
+            </Col>
+          </Row>
+        </section>
+        <section id="page10" style={{ marginBottom: "5%" }}>
+          <Row
+            style={{ height: "100%", alignItems: "start" }}
+            className="pagina-10-desktop"
+          >
+            <Row
+              style={{
+                justifyContent: "right",
+                minHeight: "12%",
+              }}
+            >
+              <Col
+                style={{
+                  backgroundImage: `url(${banner_electronico})`,
+                  backgroundSize: "contain",
+                  backgroundRepeat: "no-repeat",
+                  backgroundPosition: "right",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                }}
+              >
+                <h2
+                  style={{
+                    color: "#EEBE94",
+                    fontFamily: "Led",
+                    fontSize: "1.35rem",
+                  }}
+                >
+                  Con TransMiCable continuamos siendo activos
+                </h2>
+              </Col>
+            </Row>
+            <Row style={{ height: "85%" }}>
+              <Col
+                lg={1}
+                md={1}
+                style={{
+                  height: "100%",
+                  justifyContent: "center",
+                  display: "flex",
+                }}
+              >
+                <div
+                  style={{
+                    height: "100%",
+                    width: "100%",
+                    borderRight: "5px dashed #F19B48",
+                  }}
+                ></div>
+              </Col>
+              <Col lg={6} md={6} sm={12} xs={12}>
+                <Row
+                  style={{
+                    height: "20%",
+                    paddingTop: "5%",
+                    alignItems: "center",
+                    justifyContent: "center",
+                  }}
+                >
+                  <h5
+                    style={{
+                      width: "70%",
+                      textAlign: "center",
+                      color: "#32677F",
+                      fontFamily: "D-DIN",
+                    }}
+                  >
+                    La actividad física vigorosa en el parque Illimaní aumentó
+                    23.2 puntos porcentuales para las mujeres y 11.6 puntos
+                    porcentuales para los hombres después de su renovación.
+                  </h5>
+                </Row>
+                <Row style={{ height: "80%", alignItems: "center" }}>
+                  <Col
+                    style={{
+                      backgroundImage: `url(${grafica_5})`,
+                      backgroundSize: "contain",
+                      backgroundRepeat: "no-repeat",
+                      backgroundPosition: "25% center",
+                      height: "80%",
+                    }}
+                  ></Col>
+                </Row>
+              </Col>
+              <Col lg={4} md={4} sm={4} xs={4}>
+                <Row style={{ height: "25%" }}>
+                  <Col
+                    style={{
+                      backgroundImage: `url(${
+                        !isAudioPlaying3
+                          ? audio_controls
+                          : audio_controls_playing
+                      })`,
+                      backgroundSize: "80%",
+                      backgroundRepeat: "no-repeat",
+                      backgroundPosition: "center",
+                    }}
+                    onClick={toggleAudio3}
+                  >
+                    <audio
+                      ref={audio3_ref}
+                      src={audio3_src}
+                      style={{ display: "none" }}
+                    ></audio>
+                  </Col>
+                </Row>
+                <Row style={{ height: "75%" }}>
+                  <Col
+                    style={{
+                      backgroundImage: `url(${detalle_grafica_5})`,
+                      backgroundSize: "contain",
+                      backgroundRepeat: "no-repeat",
+                      backgroundPosition: "center",
+                    }}
+                  ></Col>
+                </Row>
+              </Col>
+            </Row>
+          </Row>
+          <Row
+            style={{
+              height: "100%",
+              width: "100%",
+              justifyContent: "center",
+            }}
+            className="pagina-10-mobile"
+          >
+            <Col style={{ height: "100%" }}>
+              <Row
+                style={{
+                  minHeight: "6vh",
+                }}
+              >
+                <Col
+                  style={{
+                    backgroundImage: `url(${banner_electronico_mobile})`,
+                    backgroundSize: "cover",
+                    backgroundRepeat: "no-repeat",
+                    backgroundPosition: "right center",
+                  }}
+                ></Col>
+              </Row>
+              <Row style={{ height: "15%" }}>
+                <p
+                  style={{
+                    textAlign: "center",
+                    color: "#32677F",
+                    marginTop: "5%",
+                    fontFamily: "D-DIN",
+                  }}
+                >
+                  La actividad física vigorosa en el parque Illimaní aumentó
+                  23.2 puntos porcentuales para las mujeres y 11.6 puntos
+                  porcentuales para los hombres después de su renovación.
+                </p>
+              </Row>
+              <Row
+                style={{
+                  height: "40%",
+                  justifyContent: "right",
+                }}
+              >
+                <Col
+                  style={{
+                    backgroundImage: `url(${grafica_5})`,
+                    backgroundSize: "90%",
+                    backgroundPosition: "25% center",
+                    backgroundRepeat: "no-repeat",
+                  }}
+                  onClick={toggleAudio3}
+                ></Col>
+              </Row>
+              <Row
+                style={{
+                  height: "35%",
+                  backgroundImage: `url(${detalle_grafica_5})`,
+                  backgroundSize: "contain",
+                  backgroundRepeat: "no-repeat",
+                  backgroundPosition: " center",
+                }}
+              ></Row>
+            </Col>
+          </Row>
+        </section>
+        <section id="page11" style={{ marginBottom: "5%" }}>
+          <Row
+            style={{ height: "100%", alignItems: "start" }}
+            className="pagina-11-desktop"
+          >
+            <Row
+              style={{
+                justifyContent: "right",
+                minHeight: "12%",
+              }}
+            >
+              <Col
+                style={{
+                  backgroundImage: `url(${banner_electronico})`,
+                  backgroundSize: "contain",
+                  backgroundRepeat: "no-repeat",
+                  backgroundPosition: "right",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                }}
+              >
+                <h2
+                  style={{
+                    color: "#EEBE94",
+                    fontFamily: "Led",
+                    fontSize: "1.35rem",
+                  }}
+                >
+                  TransMiCable nos facilita la movilidad - TransMiCable nos
+                  facilitia la movilidad
+                </h2>
+              </Col>
+            </Row>
+            <Row style={{ height: "85%" }}>
+              <Col
+                lg={1}
+                md={1}
+                style={{
+                  height: "100%",
+                  justifyContent: "center",
+                  display: "flex",
+                }}
+              >
+                <div
+                  style={{
+                    height: "100%",
+                    width: "100%",
+                    borderRight: "5px dashed #F19B48",
+                  }}
+                ></div>
+              </Col>
+              <Col lg={6} md={6} sm={12} xs={12}>
+                <Row style={{ height: "70%", alignItems: "center" }}>
+                  <div
+                    style={{
+                      display: "flex",
+                      justifyContent: "left",
+                      alignItems: "center",
+                      marginBottom: "-20%",
+                      width: "90%",
+                    }}
+                  >
+                    <img src={icono_bullet} style={{ width: "15%" }} />
+                    <p
+                      style={{
+                        marginLeft: "5%",
+                        color: "#32677F",
+                        fontFamily: "D-DIN",
+                      }}
+                    >
+                      La calidad de vida relacionada con la salud de las mujeres
+                      aumentó después de la implementación de TransMiCable.
+                    </p>
+                  </div>
+                  <div
+                    style={{
+                      display: "flex",
+                      justifyContent: "left",
+                      alignItems: "center",
+                      width: "90%",
+                    }}
+                  >
+                    <img src={icono_bullet} style={{ width: "15%" }} />
+                    <p
+                      style={{
+                        marginLeft: "5%",
+                        color: "#32677F",
+                        fontFamily: "D-DIN",
+                      }}
+                    >
+                      En los hombres de Ciudad Bolívar no se presentó un cambio
+                      en el puntaje de calidad de vida relacionada con la salud.
+                    </p>
+                  </div>
+                </Row>
+                <Row
+                  style={{
+                    height: "12%",
+                    backgroundImage: `url(${
+                      !isAudioPlaying5 ? audio_controls : audio_controls_playing
+                    })`,
+                    backgroundSize: "50%",
+                    backgroundRepeat: "no-repeat",
+                    backgroundPosition: "center",
+                  }}
+                  onClick={toggleAudio5}
+                >
+                  <audio
+                    ref={audio5_ref}
+                    src={audio5_src}
+                    style={{ display: "none" }}
+                  ></audio>
+                </Row>
+              </Col>
+              <Col lg={4} md={4} sm={4} xs={4}>
+                <Row style={{ height: "100%" }}>
+                  <Col
+                    style={{
+                      backgroundImage: `url(${grafica_6})`,
+                      backgroundSize: "contain",
+                      backgroundRepeat: "no-repeat",
+                      backgroundPosition: "center",
+                    }}
+                  ></Col>
+                </Row>
+              </Col>
+            </Row>
+          </Row>
+          <Row
+            style={{
+              height: "100%",
+              width: "100%",
+              justifyContent: "center",
+            }}
+            className="pagina-11-mobile"
+          >
+            <Col style={{ height: "100%" }}>
+              <Row
+                style={{
+                  minHeight: "6vh",
+                }}
+              >
+                <Col
+                  style={{
+                    backgroundImage: `url(${banner_electronico_mobile})`,
+                    backgroundSize: "cover",
+                    backgroundRepeat: "no-repeat",
+                    backgroundPosition: "right center",
+                  }}
+                ></Col>
+              </Row>
+              <Row style={{ height: "35%", justifyContent: "center" }}>
+                <div
+                  style={{
+                    display: "flex",
+                    justifyContent: "left",
+                    alignItems: "center",
+                    marginBottom: "-10%",
+                    width: "90%",
+                  }}
+                >
+                  <img src={icono_bullet} style={{ width: "15%" }} />
+                  <p
+                    style={{
+                      marginLeft: "5%",
+                      color: "#32677F",
+                      fontFamily: "D-DIN",
+                    }}
+                  >
+                    La calidad de vida relacionada con la salud de las mujeres
+                    aumentó después de la implementación de TransMiCable.
+                  </p>
+                </div>
+                <div
+                  style={{
+                    display: "flex",
+                    justifyContent: "left",
+                    alignItems: "center",
+                    width: "90%",
+                  }}
+                >
+                  <img src={icono_bullet} style={{ width: "15%" }} />
+                  <p
+                    style={{
+                      marginLeft: "5%",
+                      color: "#32677F",
+                      fontFamily: "D-DIN",
+                    }}
+                  >
+                    En los hombres de Ciudad Bolívar no se presentó un cambio en
+                    el puntaje de calidad de vida relacionada con la salud.
+                  </p>
+                </div>
+              </Row>
+              <Row
+                style={{
+                  height: "40%",
+                  justifyContent: "right",
+                }}
+              >
+                <Col
+                  style={{
+                    backgroundImage: `url(${grafica_6})`,
+                    backgroundSize: "90%",
+                    backgroundPosition: "25% center",
+                    backgroundRepeat: "no-repeat",
+                  }}
+                  onClick={toggleAudio3}
+                ></Col>
+              </Row>
+              <Row
+                style={{
+                  height: "12%",
+                  backgroundImage: `url(${
+                    !isAudioPlaying5 ? audio_controls : audio_controls_playing
+                  })`,
+                  backgroundSize: "75%",
+                  backgroundRepeat: "no-repeat",
+                  backgroundPosition: "center",
+                  marginTop: "5%",
+                }}
+                onClick={toggleAudio5}
+              ></Row>
+            </Col>
+          </Row>
+        </section>
+        <section id="page12" style={{ marginBottom: "5%" }}>
+          <Row
+            style={{ height: "100%", alignItems: "start", overflow: "scroll" }}
+          >
+            <Row style={{ height: "25%", width: "75%" }}>
+              <div
+                style={{
+                  backgroundImage: `url(${banner_subtitulo})`,
+                  backgroundSize: "contain",
+                  backgroundRepeat: "no-repeat",
+                  backgroundPosition: "left center",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  width: "100%",
+                  height: "100%",
+                  transform: "scaleX(-1)",
+                }}
+                id="video"
+              >
+                <h2
+                  style={{
+                    color: "white",
+                    transform: "scaleX(-1)",
+                    fontFamily: "Futura",
+                  }}
+                >
+                  <b>
+                    Conoce más del
+                    <br />
+                    estudio TrUST
+                  </b>
+                </h2>
+              </div>
+            </Row>
+            <Row style={{ minHeight: "85%", marginTop: "-2%" }}>
+              <Col lg={12} md={12} sm={12} xs={12}>
+                <Row style={{ height: "100%" }}>
+                  <div
+                    style={{
+                      backgroundSize: "60%",
+                      backgroundRepeat: "no-repeat",
+                      backgroundPosition: "center",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      width: "100%",
+                      height: "100%",
+                    }}
+                  >
+                    <div
+                      style={{
+                        width: "60%",
+                        height: "80%",
+                        backgroundColor: "#32677F",
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        borderRadius: "20px",
+                      }}
+                    >
+                      <iframe
+                        width="95%"
+                        height="95%"
+                        src="https://www.youtube-nocookie.com/embed/4dvQ2NPikU4?si=VtznJ-MOhnV1Nf48"
+                        title="YouTube video player"
+                        frameBorder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowFullScreen
+                      ></iframe>
+                    </div>
+                  </div>
+                </Row>
+              </Col>
+            </Row>
+            <Row style={{ justifyContent: "center", marginTop: "-3%" }}>
+              <Col style={{ marginLeft: "7%", marginRight: "7%" }}>
+                <Row>
+                  <div
+                    style={{
+                      display: "flex",
+                      justifyContent: "left",
+                      alignItems: "center",
+                    }}
+                  >
+                    <img src={icono_bullet} style={{ width: "85px" }} />
+                    <h2
+                      style={{
+                        marginLeft: "2%",
+                        color: "#32677F",
+                        fontFamily: "Futura",
+                      }}
+                    >
+                      <b>Publicaciones en revistas científicas</b>
+                    </h2>
+                  </div>
+                  <Row style={{ marginTop: "2%" }}>
+                    <ul style={{ color: "#32677F", fontFamily: "D-DIN" }}>
+                      <li>
+                        Baldovino-Chiquillo L, Sarmiento OL, O'Donovan G,
+                        Wilches-Mogollon MA, Aguilar AF, Florez-Pregonero A, et
+                        al. Effects of an urban cable car intervention on
+                        physical activity: the TrUST natural experiment in
+                        Bogotá, Colombia. Lancet Glob Health, 2023.
+                      </li>
+                      <li>
+                        Guevara-Aladino P, Baldovino-Chiquillo L, Rubio MA,
+                        Slesinski C, Levy P, Flórez D, et al. Winds of change:
+                        the case of TransMiCable, a community-engaged transport
+                        intervention improving equity and health in Bogotá,
+                        Colombia. Cities & Health, 2022; 1:32-40.
+                        <span style={{ color: "#AD454B" }}>
+                          https://doi.org/10.1080/23748834.2022.2038981
+                        </span>
+                      </li>
+                      <li>
+                        Guzmán LA, Cantillo-Garcia VA, Arellana J, Sarmiento OL.
+                        User expectations and perceptions towards new public
+                        transport infrastructure: evaluating a cable car in
+                        Bogotá. Transportation, 2022; 50:751-771.
+                        <span style={{ color: "#AD454B" }}>
+                          https://doi.org/10.1007/s11116-021-10260-x
+                        </span>
+                      </li>
+                      <li>
+                        Guzmán LA, Arellana J, Oviedo D, Castaño Herrera D,
+                        Sarmiento OL. Lifting urban mobility for the poor:
+                        Cable-cars, travel satisfaction and subjective
+                        well-being. Transp Res, 2023; 103765.
+                        <span style={{ color: "#AD454B" }}>
+                          https://doi.org/10.1016/j.trd.2023.103765z
+                        </span>
+                      </li>
+                      <li>
+                        Guzmán LA, Cantillo-Garcia V, Arellana J, Sarmiento OL.
+                        Evaluating the effects of social capital on travel
+                        behavior: Modeling the choice of an innovative transport
+                        mode. Travel Behaviour and Society 2023;33:100612.
+                        <span style={{ color: "#AD454B" }}>
+                          https://doi.org/10.1016/j.tbs.2023.100612
+                        </span>
+                      </li>
+                      <li>
+                        Morales-Betancourt R, Wilches-Mogollon MA, Sarmiento OL,
+                        Mendez Molano D, Angulo D, filigrana P, et al.
+                        Commuter’s personal exposure to air pollutants after the
+                        implementation of a cable car for public transport:
+                        Results of the natural experiment TrUST. Sci Total
+                        Environ 2023; 865.
+                        <span style={{ color: "#AD454B" }}>
+                          https://doi.org/10.1016/j.scitotenv.2022.160880
+                        </span>
+                      </li>
+                      <li>
+                        Rubio MA, Sarmiento OL, Guevara T, O'Donovan G, Muñoz A,
+                        Guzmán LA, et al. The Impacts of an Urban Cable Car
+                        System on Liveability: A Mixed Methods Study in Bogotá,
+                        Colombia. In: Biloria, N., Sebag, G., Robertson, H.
+                        (eds) The Empathic City. S.M.A.R.T. Environments.
+                        Springer, Cham, 2023.
+                        <span style={{ color: "#AD454B" }}>
+                          https://doi.org/10.1007/978-3-031-32840-4_14
+                        </span>
+                      </li>
+                      <li>
+                        Sarmiento OL, Higuera-Mendieta D, Wilches-Mogollon MA,
+                        Guzman LA, Rodriguez DA, Morales R, et al. Urban
+                        Transformations and Health: Methods for TrUST-a Natural
+                        Experiment Evaluating the Impacts of a Mass Transit
+                        Cable Car in Bogota, Colombia. Front Public Health,
+                        2020; 8:64.
+                        <span style={{ color: "#AD454B" }}>
+                          https://doi.org/10.3389/fpubh.2020.00064
+                        </span>
+                      </li>
+                    </ul>
+                  </Row>
+                </Row>
+                <Row>
+                  <Col lg={8} md={12} sm={12} xs={12}>
+                    <div
+                      style={{
+                        display: "flex",
+                        justifyContent: "left",
+                        alignItems: "center",
+                      }}
+                    >
+                      <img src={icono_bullet} style={{ width: "85px" }} />
+                      <h2
+                        style={{
+                          marginLeft: "15px",
+                          color: "#32677F",
+                          fontFamily: "Futura",
+                        }}
+                      >
+                        <b>Resúmenes de política</b>
+                      </h2>
+                    </div>
+                    <Row style={{ marginTop: "2%" }}>
+                      <ul style={{ color: "#32677F", fontFamily: "D-DIN" }}>
+                        <li>
+                          Guevara T, Sarmiento OL, Higuera D, Useche AF, Rubio
+                          MA, Wilches MA, et al. Transformaciones Urbanas y
+                          Salud: Resultados de la evaluación del TransMiCable.
+                          Resumen de resultados no. 1, 2020.
+                        </li>
+                        <li>
+                          Guevara-Aladino P, Baldovino-Chiquillo L, Martínez P,
+                          Cantillo-García V, Gómez-García L, Useche AF, et al.
+                          Transformaciones Urbanas y Salud (TrUST): Resultados
+                          de la evaluación del TransMiCable durante la pandemia
+                          por COVID-19. Resumen de resultados no. 2, 2022.
+                        </li>
+                      </ul>
+                    </Row>
+                  </Col>
+                  <Col lg={4} md={12} sm={12} xs={12}>
+                    <div
+                      style={{
+                        display: "flex",
+                        justifyContent: "left",
+                        alignItems: "center",
+                      }}
+                    >
+                      <img src={icono_bullet} style={{ width: "85px" }} />
+                      <h2
+                        style={{
+                          marginLeft: "15px",
+                          color: "#32677F",
+                          fontFamily: "Futura",
+                        }}
+                      >
+                        <b>Contacto</b>
+                      </h2>
+                    </div>
+                    <Row style={{ marginTop: "4%" }}>
+                      <Col lg={12} md={12} sm={12} xs={12}>
+                        <div
+                          style={{
+                            height: "25vh",
+                            width: "100%",
+                            backgroundColor: "#D5D6D6",
+                            borderRadius: "10px",
+                            padding: "0.7rem",
+                            display: "flex",
+                            alignItems: "center",
+                            justifyContent: "center",
+                          }}
+                        >
+                          <p
+                            style={{
+                              textAlign: "center",
+                              color: "#32677F",
+                              fontFamily: "D-DIN",
+                            }}
+                          >
+                            Olga Lucía Sarmiento
+                            <br />
+                            <span style={{ color: "#AD454B" }}>
+                              (osarmien@uniandes.edu.co)
+                            </span>
+                            <br />
+                            <br />
+                            Proyecto Salud Urbana en América Latina (SALURBAL):
+                            <br />
+                            <span style={{ color: "#AD454B" }}>
+                              https://drexel.edu/lac/salurbal/overview/
+                            </span>
+                          </p>
+                        </div>
+                      </Col>
+                    </Row>
+                  </Col>
+                </Row>
+                <Row>
+                  <div
+                    style={{
+                      display: "flex",
+                      justifyContent: "left",
+                      alignItems: "center",
+                    }}
+                  >
+                    <img src={icono_bullet} style={{ width: "85px" }} />
+                    <h2
+                      style={{
+                        marginLeft: "2%",
+                        color: "#32677F",
+                        fontFamily: "Futura",
+                      }}
+                    >
+                      <b>Desarrolladores</b>
+                    </h2>
+                  </div>
+                  <Row style={{ marginTop: "2%" }}>
+                    <Col lg={6} md={12} sm={12} xs={12}>
+                      <p style={{ color: "#32677F", fontFamily: "D-DIN" }}>
+                        Autores:
+                        <br />
+                        <br />
+                        Olga Lucia Sarmiento (1), Laura Baldovino Chiquillo (1),
+                        María Alejandra Wilches (1, 2), Donny Sebastián Pasos
+                        (1), Leonardo Palencia (1), Luis Ángel Guzmán (2), Alex
+                        Quistberg (3).
+                      </p>
+                    </Col>
+                    <Col lg={6} md={12} sm={12} xs={12}>
+                      <div
+                        style={{
+                          height: "25vh",
+                          width: "100%",
+                          backgroundColor: "#D5D6D6",
+                          borderRadius: "10px",
+                          padding: "0.7rem",
+                          display: "flex",
+                          alignItems: "center",
+                        }}
+                      >
+                        <ol style={{ color: "#32677F", fontFamily: "D-DIN" }}>
+                          <li>
+                            Facultdad de Medicina, Universidad de los Andes,
+                            Bogotá, Colombia.
+                          </li>
+                          <li>
+                            Departamento de Ingeniería, Universidad de los
+                            Andes, Bogotá, Colombia.
+                          </li>
+                          <li>Drexel University, Filadelfia, Estados Unidos</li>
+                        </ol>
+                      </div>
+                    </Col>
+                  </Row>
+                  <Row style={{ marginTop: "2%", justifyContent: "center" }}>
+                    <Col lg={4} md={12} sm={12} xs={12}>
+                      <p style={{ color: "#32677F", fontFamily: "D-DIN" }}>
+                        Diseño gráfico: Vera Fonseca
+                      </p>
+                    </Col>
+                    <Col lg={4} md={12} sm={12} xs={12}>
+                      <p style={{ color: "#32677F", fontFamily: "D-DIN" }}>
+                        Desarrollo web: Fabián Peña
+                      </p>
+                    </Col>
+                    <Col lg={4} md={12} sm={12} xs={12}>
+                      <p style={{ color: "#32677F", fontFamily: "D-DIN" }}>
+                        Producción de audio: Nikol Pizarro
+                      </p>
+                    </Col>
+                  </Row>
+                </Row>
+                <Row style={{ marginTop: "2%" }}>
+                  <div
+                    style={{
+                      display: "flex",
+                      justifyContent: "left",
+                      alignItems: "center",
+                    }}
+                  >
+                    <img src={icono_bullet} style={{ width: "85px" }} />
+                    <h2
+                      style={{
+                        marginLeft: "2%",
+                        color: "#32677F",
+                        fontFamily: "Futura",
+                      }}
+                    >
+                      <b>Financiadores</b>
+                    </h2>
+                  </div>
+                  <Row style={{ justifyContent: "center" }}>
+                    <div
+                      style={{
+                        height: "18vh",
+                        width: "60%",
+                        backgroundColor: "#D5D6D6",
+                        borderRadius: "10px",
+                        padding: "0.7rem",
+                        display: "flex",
+                        alignItems: "center",
+                      }}
+                    >
+                      <p
+                        style={{
+                          textAlign: "center",
+                          color: "#32677F",
+                          fontFamily: "D-DIN",
+                        }}
+                      >
+                        <b style={{ color: "#32677F" }}>TrUST</b> fue financiado
+                        por el Wellcome Trust, el Ministerio de Ciencia y
+                        Tecnología e Innovación, la Secretaría Distrital de
+                        Planeación de Bogotá, la Universidad de los Andes y la
+                        Universidad del Norte.
+                      </p>
+                    </div>
+                  </Row>
+                </Row>
+              </Col>
+            </Row>
+          </Row>
+        </section>
+        <section>
+          <Row style={{ marginTop: "5%" }}>
+            <Col
+              style={{
+                height: "25vh",
+                width: "100%",
+                backgroundColor: "#D5D6D6",
+                alignItems: "center",
+              }}
+            >
+              <Row
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  height: "100%",
+                }}
+              >
+                <Col className="logo-container">
+                  <Image
+                    src={salurbal}
+                    alt="Logo salurbal"
+                    className="logo-resource"
+                    fluid
+                  />
+                </Col>
+                <Col className="logo-container">
+                  <Image
+                    src={drexel}
+                    alt="Logo drexel university"
+                    style={{
+                      mixBlendMode: "darken",
+                    }}
+                    className="logo-resource"
+                    fluid
+                  />
+                </Col>
+                <Col className="logo-container">
+                  <Image
+                    src={uniandes}
+                    alt="Logo universidad de los andes"
+                    className="logo-resource"
+                    fluid
+                  />
+                </Col>
+                <Col className="logo-container">
+                  <Image
+                    src={uninorte}
+                    alt="Logo universidad del norte"
+                    className="logo-resource"
+                    fluid
+                  />
+                </Col>
+              </Row>
             </Col>
           </Row>
         </section>
