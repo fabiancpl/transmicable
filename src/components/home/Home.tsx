@@ -12,7 +12,6 @@ import drexel from "../../assets/logos/drexel_university.png";
 import uniandes from "../../assets/logos/universidad_andes.png";
 import uninorte from "../../assets/logos/universidad_norte.png";
 import banner_subtitulo from "../../assets/images/banner_subtitulo.png";
-import mapa_desktop from "../../assets/images/mapa_desktop.png";
 import mountains_personaje_1 from "../../assets/images/mountains_personaje_1.png";
 import bubble_1 from "../../assets/images/bubble_1.png";
 import audio_1 from "../../assets/images/audio_1.png";
@@ -63,64 +62,16 @@ import grafica_6 from "../../assets/images/grafica_6.png";
 import audio1_src from "../../assets/audios/Audio1_Ana.wav";
 import audio2_src from "../../assets/audios/Audio2_Ana.wav";
 import audio3_src from "../../assets/audios/Audio3_Maria.wav";
-import audio4_src from "../../assets/audios/Audio4_Ana.wav";
-import audio5_src from "../../assets/audios/Audio5_Maria.wav";
-import audio6_src from "../../assets/audios/Audio6_Ana.wav";
-import audio7_src from "../../assets/audios/Audio 7_Maria.wav";
-import audio8_src from "../../assets/audios/Audio8_Ana.wav";
-import audio9_src from "../../assets/audios/Audio9_Maria.wav";
-import audio10_src from "../../assets/audios/Audio10_Ana.wav";
-import audio11_src from "../../assets/audios/Audio11_Maria.wav";
-import {
-  FormControl,
-  InputLabel,
-  MenuItem,
-  Select,
-  SelectChangeEvent,
-} from "@mui/material";
+import audio4_src from "../../assets/audios/audio_compressed_4.mp3";
+import audio5_src from "../../assets/audios/audio_compressed_5.mp3";
+import audio6_src from "../../assets/audios/audio_compressed_6.mp3";
+import audio7_src from "../../assets/audios/audio_compressed_7.mp3";
+
+import DesktopMap from "../map/desktop/DesktopMap.tsx";
+import MobileMap from "../map/mobile/MobileMap.tsx";
+import BannerElectronico from "../shared/bannerElectronico/BannerElectronico.tsx";
 
 function Home() {
-  const audioGroup: string[] = [audio4_src, audio5_src];
-  const audioGroup2: string[] = [audio6_src, audio7_src];
-  const audioGroup3: string[] = [audio8_src, audio9_src];
-  const audioGroup4: string[] = [audio10_src, audio11_src];
-
-  const [audioSelectIndex, setAudioIndex] = React.useState("");
-
-  const handleChange = (event: SelectChangeEvent) => {
-    setAudioIndex(event.target.value);
-    if (isAudioPlaying4) {
-      toggleAudio4();
-    }
-  };
-
-  const [audioSelectIndex2, setAudioIndex2] = React.useState("");
-
-  const handleChange2 = (event: SelectChangeEvent) => {
-    setAudioIndex2(event.target.value);
-    if (isAudioPlaying5) {
-      toggleAudio5();
-    }
-  };
-
-  const [audioSelectIndex3, setAudioIndex3] = React.useState("");
-
-  const handleChange3 = (event: SelectChangeEvent) => {
-    setAudioIndex3(event.target.value);
-    if (isAudioPlaying6) {
-      toggleAudio6();
-    }
-  };
-
-  const [audioSelectIndex4, setAudioIndex4] = React.useState("");
-
-  const handleChange4 = (event: SelectChangeEvent) => {
-    setAudioIndex4(event.target.value);
-    if (isAudioPlaying7) {
-      toggleAudio7();
-    }
-  };
-
   const [isAudioPlaying1, setIsAudioPlaying1] = useState(false);
   const audio1_ref = React.useRef<HTMLAudioElement | null>(null);
   const toggleAudio1 = () => {
@@ -214,8 +165,8 @@ function Home() {
 
   return (
     <div className="main-content">
-      <Container fluid>
-        <section id="page1">
+      <Container fluid style={{ margin: "0", padding: "0" }}>
+        <section id="page1" style={{ width: "100vw" }}>
           <Row
             style={{
               backgroundImage: `url(${cableTransmicable})`,
@@ -225,15 +176,8 @@ function Home() {
               marginTop: "3.4%",
             }}
           ></Row>
-          <Row className="justify-content-center">
-            <Row
-              style={{
-                backgroundImage: `url(${nubes2})`,
-                backgroundSize: "70%",
-                backgroundRepeat: "no-repeat",
-                backgroundPosition: "75% top",
-              }}
-            >
+          <Row className="justify-content-center" style={{ width: "100vw" }}>
+            <Row>
               <Col lg={4} md={12} sm={12} xs={12}></Col>
               <Col
                 lg={4}
@@ -242,9 +186,22 @@ function Home() {
                 xs={12}
                 style={{
                   backgroundImage: `url(${cabinaTransmicable})`,
+                  justifyContent: "center",
                 }}
                 className="cabina-transmicable"
-              ></Col>
+              >
+                <div
+                  style={{
+                    backgroundImage: `url(${nubes2})`,
+                    backgroundSize: "contain",
+                    backgroundRepeat: "no-repeat",
+                    backgroundPosition: "75% top",
+                    height: "40vh",
+                    width: "100vw",
+                  }}
+                  className="moving-image-left"
+                ></div>
+              </Col>
               <Col
                 lg={4}
                 md={12}
@@ -257,14 +214,12 @@ function Home() {
                     style={{
                       textAlign: "center",
                       color: "#E34339",
-                      fontFamily: "Lemon-Milk",
+                      fontFamily: "Futura",
                     }}
                   >
-                    <b>
-                      TRANSFORMACIONES
-                      <br />
-                      URBANAS Y SALUD (TrUST):
-                    </b>
+                    TRANSFORMACIONES
+                    <br />
+                    URBANAS Y SALUD (TrUST):
                   </h1>
                   <h2
                     style={{
@@ -290,7 +245,9 @@ function Home() {
                 backgroundPosition: "center",
                 marginTop: "-16%",
                 marginBottom: "-16%",
+                overflow: "hidden",
               }}
+              className="moving-image-right"
             ></Row>
             <Row
               className="justify-content-center"
@@ -409,14 +366,12 @@ function Home() {
             </Col>
           </Row>
         </section>
-        <section id="page3">
+        <section id="page3" style={{ marginTop: "2%" }}>
           <Row className="mapa-transmicable-container">
-            <Col
-              style={{
-                backgroundImage: `url(${mapa_desktop})`,
-              }}
-              className="mapa-transmicable"
-            ></Col>
+            <DesktopMap />
+          </Row>
+          <Row className="mapa-transmicable-container-mobile">
+            <MobileMap />
           </Row>
         </section>
         <section id="page4">
@@ -529,14 +484,14 @@ function Home() {
             <Col className="imagenes-resultado-trust">
               <Image
                 fluid
-                src={seguridad_img_desktop}
+                src={calidad_aire_img_desktop}
                 style={{ width: "80%" }}
               ></Image>
             </Col>
             <Col className="imagenes-resultado-trust">
               <Image
                 fluid
-                src={calidad_vida_img_desktop}
+                src={seguridad_img_desktop}
                 style={{ width: "80%" }}
               ></Image>
             </Col>
@@ -550,7 +505,7 @@ function Home() {
             <Col className="imagenes-resultado-trust">
               <Image
                 fluid
-                src={calidad_aire_img_desktop}
+                src={calidad_vida_img_desktop}
                 style={{ width: "80%" }}
               ></Image>
             </Col>
@@ -594,7 +549,32 @@ function Home() {
                     </b>
                   </Carousel.Caption>
                 </Carousel.Item>
-
+                <Carousel.Item>
+                  <div
+                    style={{ display: "flex", justifyContent: "center" }}
+                    className="carousel-mobile-item"
+                  >
+                    <Image src={calidad_aire_img} fluid></Image>
+                  </div>
+                  <Carousel.Caption>
+                    <b>
+                      <h1
+                        style={{
+                          color: "white",
+                          backgroundColor: "#32667E",
+                          padding: "1rem",
+                          borderRadius: "30px",
+                          fontFamily: "Lemon-Milk",
+                          fontSize: "1.5rem",
+                        }}
+                      >
+                        CALIDAD
+                        <br />
+                        DEL AIRE
+                      </h1>
+                    </b>
+                  </Carousel.Caption>
+                </Carousel.Item>
                 <Carousel.Item>
                   <div
                     style={{ display: "flex", justifyContent: "center" }}
@@ -615,32 +595,6 @@ function Home() {
                         }}
                       >
                         SEGURIDAD
-                      </h1>
-                    </b>
-                  </Carousel.Caption>
-                </Carousel.Item>
-                <Carousel.Item>
-                  <div
-                    style={{ display: "flex", justifyContent: "center" }}
-                    className="carousel-mobile-item"
-                  >
-                    <Image src={calidad_vida_img} fluid></Image>
-                  </div>
-                  <Carousel.Caption>
-                    <b>
-                      <h1
-                        style={{
-                          color: "white",
-                          backgroundColor: "#32667E",
-                          padding: "1rem",
-                          borderRadius: "30px",
-                          fontFamily: "Lemon-Milk",
-                          fontSize: "1.5rem",
-                        }}
-                      >
-                        CALIDAD
-                        <br />
-                        DE VIDA
                       </h1>
                     </b>
                   </Carousel.Caption>
@@ -676,7 +630,7 @@ function Home() {
                     style={{ display: "flex", justifyContent: "center" }}
                     className="carousel-mobile-item"
                   >
-                    <Image src={calidad_aire_img} fluid></Image>
+                    <Image src={calidad_vida_img} fluid></Image>
                   </div>
                   <Carousel.Caption>
                     <b>
@@ -692,7 +646,7 @@ function Home() {
                       >
                         CALIDAD
                         <br />
-                        DEL AIRE
+                        DE VIDA
                       </h1>
                     </b>
                   </Carousel.Caption>
@@ -719,33 +673,51 @@ function Home() {
             }}
             className="pagina-6-desktop"
           >
-            <Row
-              style={{
-                minHeight: "12vh",
-              }}
-            >
-              <Col
-                style={{
-                  backgroundImage: `url(${banner_electronico})`,
-                  backgroundSize: "contain",
-                  backgroundRepeat: "no-repeat",
-                  backgroundPosition: "right center",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                }}
-              >
-                <h2
-                  style={{
-                    color: "#EEBE94",
-                    fontFamily: "Led",
-                    fontSize: "1.35rem",
-                  }}
-                >
-                  TransMiCable nos facilita la movilidad
-                </h2>
-              </Col>
-            </Row>
+            <BannerElectronico
+              text={"TransMiCable nos facilita la movilidad"}
+            />
+            {/*<Row*/}
+            {/*  style={{*/}
+            {/*    height: "12%",*/}
+            {/*    justifyContent: "right",*/}
+            {/*  }}*/}
+            {/*>*/}
+            {/*  <Col*/}
+            {/*    style={{*/}
+            {/*      backgroundImage: `url(${banner_electronico})`,*/}
+            {/*      backgroundSize: "contain",*/}
+            {/*      backgroundRepeat: "no-repeat",*/}
+            {/*      backgroundPosition: "right",*/}
+            {/*      display: "flex",*/}
+            {/*      alignItems: "center",*/}
+            {/*      justifyContent: "right",*/}
+            {/*      height: "100%",*/}
+            {/*      width: "100%",*/}
+            {/*    }}*/}
+            {/*  >*/}
+            {/*    <div*/}
+            {/*      style={{*/}
+            {/*        width: "92%",*/}
+            {/*        height: "90%",*/}
+            {/*        overflow: "hidden",*/}
+            {/*        display: "flex",*/}
+            {/*        alignItems: "center",*/}
+            {/*      }}*/}
+            {/*      className="banner-electronico-container"*/}
+            {/*    >*/}
+            {/*      <h2*/}
+            {/*        style={{*/}
+            {/*          color: "#EEBE94",*/}
+            {/*          fontFamily: "Led",*/}
+            {/*          fontSize: "1.35rem",*/}
+            {/*        }}*/}
+            {/*        className="moving-text-right"*/}
+            {/*      >*/}
+            {/*        TransMiCable nos facilita la movilidad*/}
+            {/*      </h2>*/}
+            {/*    </div>*/}
+            {/*  </Col>*/}
+            {/*</Row>*/}
             <Row style={{ height: "88%" }}>
               <Col
                 lg={1}
@@ -786,9 +758,9 @@ function Home() {
                       fontFamily: "D-DIN",
                     }}
                   >
-                    El tiempo promedio de viaje en Ciudad Bolívar disminuyó en
-                    20 minutos un año despúes de la implementación del
-                    TransMiCable
+                    En la zona de influencia del TransMiCable en Ciudad Bolívar,
+                    el tiempo de viaje al lugar de trabajo o estudio disminuyó
+                    en 20 minutos un año despúes de su implementación.
                   </h5>
                 </Row>
                 <Row
@@ -923,7 +895,7 @@ function Home() {
                 }}
               >
                 <h2 style={{ color: "white", fontFamily: "Futura" }}>
-                  <b>En Ciudad Bolivar</b>
+                  <b>TransMiCable en Ciudad Bolivar</b>
                 </h2>
               </div>
             </Row>
@@ -1021,8 +993,8 @@ function Home() {
                     style={{
                       backgroundImage: `url(${
                         !isAudioPlaying3
-                          ? audio_controls
-                          : audio_controls_playing
+                          ? audio_2_mobile
+                          : audio_2_mobile_playing
                       })`,
                       backgroundSize: "65%",
                       backgroundRepeat: "no-repeat",
@@ -1059,10 +1031,11 @@ function Home() {
                   <h2
                     style={{
                       color: "white",
+                      fontFamily: "Futura",
                     }}
                     className="texto-banner-subtitulo"
                   >
-                    <b>En Ciudad Bolivar</b>
+                    <b>TransMiCable en Ciudad Bolivar</b>
                   </h2>
                 </Col>
               </Row>
@@ -1146,40 +1119,68 @@ function Home() {
             </Col>
           </Row>
         </section>
-        <section id="page8" style={{ marginBottom: "5%" }}>
+        <section
+          id="page8"
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            marginBottom: "5%",
+          }}
+        >
           <Row
-            style={{ height: "100%", alignItems: "start" }}
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "start",
+              height: "100%",
+              width: "100%",
+            }}
             className="pagina-8-desktop"
           >
-            <Row
-              style={{
-                justifyContent: "right",
-                minHeight: "12%",
-              }}
-            >
-              <Col
-                style={{
-                  backgroundImage: `url(${banner_electronico})`,
-                  backgroundSize: "contain",
-                  backgroundRepeat: "no-repeat",
-                  backgroundPosition: "right",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  overflow: "hidden",
-                }}
-              >
-                <h2
-                  style={{
-                    color: "#EEBE94",
-                    fontFamily: "Led",
-                    fontSize: "1.35rem",
-                  }}
-                >
-                  TransMiCable nos proporciona un aire mas limpio
-                </h2>
-              </Col>
-            </Row>
+            <BannerElectronico
+              text={"TransMiCable nos proporciona un aire mas limpio"}
+            />
+            {/*<Row*/}
+            {/*  style={{*/}
+            {/*    justifyContent: "right",*/}
+            {/*    height: "12%",*/}
+            {/*  }}*/}
+            {/*>*/}
+            {/*  <Col*/}
+            {/*    style={{*/}
+            {/*      backgroundImage: `url(${banner_electronico})`,*/}
+            {/*      backgroundSize: "contain",*/}
+            {/*      backgroundRepeat: "no-repeat",*/}
+            {/*      backgroundPosition: "right",*/}
+            {/*      display: "flex",*/}
+            {/*      alignItems: "center",*/}
+            {/*      justifyContent: "right",*/}
+            {/*    }}*/}
+            {/*  >*/}
+            {/*    <div*/}
+            {/*      style={{*/}
+            {/*        width: "92%",*/}
+            {/*        height: "90%",*/}
+            {/*        overflow: "hidden",*/}
+            {/*        display: "flex",*/}
+            {/*        alignItems: "center",*/}
+            {/*      }}*/}
+            {/*      className="banner-electronico-container"*/}
+            {/*    >*/}
+            {/*      <h2*/}
+            {/*        style={{*/}
+            {/*          color: "#EEBE94",*/}
+            {/*          fontFamily: "Led",*/}
+            {/*          fontSize: "1.35rem",*/}
+            {/*          whiteSpace: "nowrap",*/}
+            {/*        }}*/}
+            {/*        className="moving-text-right"*/}
+            {/*      >*/}
+            {/*        TransMiCable nos proporciona un aire mas limpio*/}
+            {/*      </h2>*/}
+            {/*    </div>*/}
+            {/*  </Col>*/}
+            {/*</Row>*/}
             <Row style={{ height: "85%" }}>
               <Col
                 lg={1}
@@ -1228,9 +1229,10 @@ function Home() {
                       fontFamily: "D-DIN",
                     }}
                   >
-                    Las concentraciones de hollín por viaje son 34% más bajas
-                    usando el TransMiCable en comparación con el uso de los
-                    buses alimentadores.
+                    En las cabinas de TransMiCable, en comparación con los buses
+                    alimentadores, las concentraciones por viaje de material
+                    particulado fino (PM2.5) fueron 27% más bajas y las de
+                    hollín (eBC) fueron 34% más bajas.
                   </h5>
                 </Row>
                 <Row style={{ height: "80%", alignItems: "center" }}>
@@ -1246,27 +1248,27 @@ function Home() {
                 </Row>
               </Col>
               <Col lg={4} md={4} sm={4} xs={4}>
-                <Row style={{ height: "15%" }}>
-                  <FormControl fullWidth>
-                    <InputLabel
-                      id="audio-group-4-5"
-                      style={{ color: "#32677F" }}
-                    >
-                      Escoge tu audio
-                    </InputLabel>
-                    <Select
-                      labelId="audio-group-4-5-label"
-                      id="audio-group-4-5-select"
-                      value={audioSelectIndex}
-                      label="Escoge tu audio"
-                      onChange={handleChange}
-                      style={{ color: "#32677F" }}
-                    >
-                      <MenuItem value={0}>Audio Ana</MenuItem>
-                      <MenuItem value={1}>Audio Maria</MenuItem>
-                    </Select>
-                  </FormControl>
-                </Row>
+                {/*<Row style={{ height: "15%" }}>*/}
+                {/*  <FormControl fullWidth>*/}
+                {/*    <InputLabel*/}
+                {/*      id="audio-group-4-5"*/}
+                {/*      style={{ color: "#32677F" }}*/}
+                {/*    >*/}
+                {/*      Escoge tu audio*/}
+                {/*    </InputLabel>*/}
+                {/*    <Select*/}
+                {/*      labelId="audio-group-4-5-label"*/}
+                {/*      id="audio-group-4-5-select"*/}
+                {/*      value={audioSelectIndex}*/}
+                {/*      label="Escoge tu audio"*/}
+                {/*      onChange={handleChange}*/}
+                {/*      style={{ color: "#32677F" }}*/}
+                {/*    >*/}
+                {/*      <MenuItem value={0}>Audio Ana</MenuItem>*/}
+                {/*      <MenuItem value={1}>Audio Maria</MenuItem>*/}
+                {/*    </Select>*/}
+                {/*  </FormControl>*/}
+                {/*</Row>*/}
                 <Row style={{ height: "85%" }}>
                   <Col
                     style={{
@@ -1281,7 +1283,7 @@ function Home() {
                   >
                     <audio
                       ref={audio4_ref}
-                      src={audioGroup[+audioSelectIndex]}
+                      src={audio4_src}
                       style={{ display: "none" }}
                     ></audio>
                   </Col>
@@ -1316,14 +1318,13 @@ function Home() {
               <Row
                 style={{
                   height: "45%",
-                  justifyContent: "right",
-                  paddingLeft: "8%",
+                  justifyContent: "center",
                 }}
               >
                 <Col
                   style={{
                     backgroundImage: `url(${
-                      !isAudioPlaying3
+                      !isAudioPlaying4
                         ? personaje_3_mobile
                         : personaje_3_mobile_playing
                     })`,
@@ -1331,60 +1332,102 @@ function Home() {
                     backgroundPosition: "right",
                     backgroundRepeat: "no-repeat",
                   }}
-                  onClick={toggleAudio3}
+                  onClick={toggleAudio4}
                 >
                   <audio
-                    ref={audio3_ref}
-                    src={audio3_src}
+                    ref={audio4_ref}
+                    src={audio4_src}
                     style={{ display: "none" }}
                   ></audio>
                 </Col>
               </Row>
+              {/*<Row style={{ height: "8%" }}>*/}
+              {/*  <FormControl fullWidth>*/}
+              {/*    <InputLabel id="audio-group-4-5" style={{ color: "#32677F" }}>*/}
+              {/*      Escoge tu audio*/}
+              {/*    </InputLabel>*/}
+              {/*    <Select*/}
+              {/*      labelId="audio-group-4-5-label"*/}
+              {/*      id="audio-group-4-5-select"*/}
+              {/*      value={audioSelectIndex}*/}
+              {/*      label="Escoge tu audio"*/}
+              {/*      onChange={handleChange}*/}
+              {/*      style={{ color: "#32677F" }}*/}
+              {/*    >*/}
+              {/*      <MenuItem value={0}>Audio Ana</MenuItem>*/}
+              {/*      <MenuItem value={1}>Audio Maria</MenuItem>*/}
+              {/*    </Select>*/}
+              {/*  </FormControl>*/}
+              {/*</Row>*/}
               <Row
                 style={{
                   height: "45%",
                   backgroundImage: `url(${grafica_3})`,
                   backgroundSize: "contain",
                   backgroundRepeat: "no-repeat",
-                  backgroundPosition: "center",
+                  backgroundPosition: "center top",
+                  marginTop: "5%",
                 }}
               ></Row>
             </Col>
           </Row>
         </section>
-        <section id="page9" style={{ marginBottom: "5%" }}>
+        <section
+          id="page9"
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            marginBottom: "5%",
+          }}
+        >
           <Row
             style={{ height: "100%", alignItems: "start" }}
             className="pagina-9-desktop"
           >
-            <Row
-              style={{
-                justifyContent: "right",
-                minHeight: "12%",
-              }}
-            >
-              <Col
-                style={{
-                  backgroundImage: `url(${banner_electronico})`,
-                  backgroundSize: "contain",
-                  backgroundRepeat: "no-repeat",
-                  backgroundPosition: "right",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                }}
-              >
-                <h2
-                  style={{
-                    color: "#EEBE94",
-                    fontFamily: "Led",
-                    fontSize: "1.35rem",
-                  }}
-                >
-                  Con TransMiCable disminuyo la inseguridad
-                </h2>
-              </Col>
-            </Row>
+            <BannerElectronico
+              text={"TransMiCable nos proporciona un aire mas limpio"}
+            />
+            {/*<Row*/}
+            {/*  style={{*/}
+            {/*    justifyContent: "right",*/}
+            {/*    minHeight: "12%",*/}
+            {/*  }}*/}
+            {/*>*/}
+            {/*  <Col*/}
+            {/*    style={{*/}
+            {/*      backgroundImage: `url(${banner_electronico})`,*/}
+            {/*      backgroundSize: "contain",*/}
+            {/*      backgroundRepeat: "no-repeat",*/}
+            {/*      backgroundPosition: "right",*/}
+            {/*      display: "flex",*/}
+            {/*      alignItems: "center",*/}
+            {/*      justifyContent: "right",*/}
+            {/*    }}*/}
+            {/*  >*/}
+            {/*    <div*/}
+            {/*      style={{*/}
+            {/*        width: "92%",*/}
+            {/*        height: "90%",*/}
+            {/*        overflow: "hidden",*/}
+            {/*        display: "flex",*/}
+            {/*        alignItems: "center",*/}
+            {/*      }}*/}
+            {/*      className="banner-electronico-container"*/}
+            {/*    >*/}
+            {/*      <h2*/}
+            {/*        style={{*/}
+            {/*          color: "#EEBE94",*/}
+            {/*          fontFamily: "Led",*/}
+            {/*          fontSize: "1.35rem",*/}
+            {/*          whiteSpace: "nowrap",*/}
+            {/*        }}*/}
+            {/*        className="moving-text-right"*/}
+            {/*      >*/}
+            {/*        Con TransMiCable disminuyo la inseguridad*/}
+            {/*      </h2>*/}
+            {/*    </div>*/}
+            {/*  </Col>*/}
+            {/*</Row>*/}
             <Row style={{ height: "85%" }}>
               <Col
                 lg={1}
@@ -1420,9 +1463,9 @@ function Home() {
                       fontFamily: "D-DIN",
                     }}
                   >
-                    Después de la implementación del TransMiCable en Ciudad
-                    Bolívar disminuyó la percepción de inseguridad y la
-                    victimización (hogares víctimas de hurto y robo).
+                    La percepción de inseguridad y la vitimización (hogares
+                    víctimas de hurto y robo) disminiuyó en la zona de
+                    influencia del TransMiCable después de su implementación.
                   </h5>
                 </Row>
                 <Row style={{ height: "80%", alignItems: "center" }}>
@@ -1452,32 +1495,32 @@ function Home() {
                   >
                     <audio
                       ref={audio5_ref}
-                      src={audioGroup2[+audioSelectIndex2]}
+                      src={audio5_src}
                       style={{ display: "none" }}
                     ></audio>
                   </Col>
                 </Row>
-                <Row style={{ height: "15%" }}>
-                  <FormControl fullWidth>
-                    <InputLabel
-                      id="audio-group-6-7"
-                      style={{ color: "#32677F" }}
-                    >
-                      Escoge tu audio
-                    </InputLabel>
-                    <Select
-                      labelId="audio-group-6-7-label"
-                      id="audio-group-6-7-select"
-                      value={audioSelectIndex2}
-                      label="Escoge tu audio"
-                      onChange={handleChange2}
-                      style={{ color: "#32677F" }}
-                    >
-                      <MenuItem value={0}>Audio Ana</MenuItem>
-                      <MenuItem value={1}>Audio Maria</MenuItem>
-                    </Select>
-                  </FormControl>
-                </Row>
+                {/*<Row style={{ height: "15%" }}>*/}
+                {/*  <FormControl fullWidth>*/}
+                {/*    <InputLabel*/}
+                {/*      id="audio-group-6-7"*/}
+                {/*      style={{ color: "#32677F" }}*/}
+                {/*    >*/}
+                {/*      Escoge tu audio*/}
+                {/*    </InputLabel>*/}
+                {/*    <Select*/}
+                {/*      labelId="audio-group-6-7-label"*/}
+                {/*      id="audio-group-6-7-select"*/}
+                {/*      value={audioSelectIndex2}*/}
+                {/*      label="Escoge tu audio"*/}
+                {/*      onChange={handleChange2}*/}
+                {/*      style={{ color: "#32677F" }}*/}
+                {/*    >*/}
+                {/*      <MenuItem value={0}>Audio Ana</MenuItem>*/}
+                {/*      <MenuItem value={1}>Audio Maria</MenuItem>*/}
+                {/*    </Select>*/}
+                {/*  </FormControl>*/}
+                {/*</Row>*/}
               </Col>
             </Row>
           </Row>
@@ -1513,13 +1556,13 @@ function Home() {
                 <Col
                   style={{
                     backgroundImage: `url(${cuadro_mobile})`,
-                    backgroundSize: "60%",
+                    backgroundSize: "55%",
                     backgroundPosition: "center",
                     backgroundRepeat: "no-repeat",
                   }}
                 ></Col>
               </Row>
-              <Row style={{ height: "15%" }}>
+              <Row style={{ height: "12%" }}>
                 <p
                   style={{
                     textAlign: "center",
@@ -1546,15 +1589,33 @@ function Home() {
               >
                 <audio
                   ref={audio5_ref}
-                  src={audioGroup2[+audioSelectIndex2]}
+                  src={audio5_src}
                   style={{ display: "none" }}
                 ></audio>
               </Row>
+              {/*<Row style={{ height: "8%" }}>*/}
+              {/*  <FormControl>*/}
+              {/*    <InputLabel id="audio-group-6-7" style={{ color: "#32677F" }}>*/}
+              {/*      Escoge tu audio*/}
+              {/*    </InputLabel>*/}
+              {/*    <Select*/}
+              {/*      labelId="audio-group-6-7-label"*/}
+              {/*      id="audio-group-6-7-select"*/}
+              {/*      value={audioSelectIndex2}*/}
+              {/*      label="Escoge tu audio"*/}
+              {/*      onChange={handleChange2}*/}
+              {/*      style={{ color: "#32677F" }}*/}
+              {/*    >*/}
+              {/*      <MenuItem value={0}>Audio Ana</MenuItem>*/}
+              {/*      <MenuItem value={1}>Audio Maria</MenuItem>*/}
+              {/*    </Select>*/}
+              {/*  </FormControl>*/}
+              {/*</Row>*/}
               <Row
                 style={{
                   height: "35%",
                   backgroundImage: `url(${grafica_4})`,
-                  backgroundSize: "90%",
+                  backgroundSize: "80%",
                   backgroundRepeat: "no-repeat",
                   backgroundPosition: "center",
                 }}
@@ -1562,39 +1623,62 @@ function Home() {
             </Col>
           </Row>
         </section>
-        <section id="page10" style={{ marginBottom: "5%" }}>
+        <section
+          id="page10"
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            marginBottom: "5%",
+          }}
+        >
           <Row
             style={{ height: "100%", alignItems: "start" }}
             className="pagina-10-desktop"
           >
-            <Row
-              style={{
-                justifyContent: "right",
-                minHeight: "12%",
-              }}
-            >
-              <Col
-                style={{
-                  backgroundImage: `url(${banner_electronico})`,
-                  backgroundSize: "contain",
-                  backgroundRepeat: "no-repeat",
-                  backgroundPosition: "right",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                }}
-              >
-                <h2
-                  style={{
-                    color: "#EEBE94",
-                    fontFamily: "Led",
-                    fontSize: "1.35rem",
-                  }}
-                >
-                  Con TransMiCable continuamos siendo activos
-                </h2>
-              </Col>
-            </Row>
+            <BannerElectronico
+              text={"Con TransMiCable continuamos siendo activos"}
+            />
+            {/*<Row*/}
+            {/*  style={{*/}
+            {/*    justifyContent: "right",*/}
+            {/*    minHeight: "12%",*/}
+            {/*  }}*/}
+            {/*>*/}
+            {/*  <Col*/}
+            {/*    style={{*/}
+            {/*      backgroundImage: `url(${banner_electronico})`,*/}
+            {/*      backgroundSize: "contain",*/}
+            {/*      backgroundRepeat: "no-repeat",*/}
+            {/*      backgroundPosition: "right",*/}
+            {/*      display: "flex",*/}
+            {/*      alignItems: "center",*/}
+            {/*      justifyContent: "right",*/}
+            {/*    }}*/}
+            {/*  >*/}
+            {/*    <div*/}
+            {/*      style={{*/}
+            {/*        width: "92%",*/}
+            {/*        height: "90%",*/}
+            {/*        overflow: "hidden",*/}
+            {/*        display: "flex",*/}
+            {/*        alignItems: "center",*/}
+            {/*      }}*/}
+            {/*      className="banner-electronico-container"*/}
+            {/*    >*/}
+            {/*      <h2*/}
+            {/*        style={{*/}
+            {/*          color: "#EEBE94",*/}
+            {/*          fontFamily: "Led",*/}
+            {/*          fontSize: "1.35rem",*/}
+            {/*          whiteSpace: "nowrap",*/}
+            {/*        }}*/}
+            {/*        className="moving-text-right"*/}
+            {/*      >*/}
+            {/*        Con TransMiCable continuamos siendo activos*/}
+            {/*      </h2>*/}
+            {/*    </div>*/}
+            {/*  </Col>*/}
+            {/*</Row>*/}
             <Row style={{ height: "85%" }}>
               <Col
                 lg={1}
@@ -1648,27 +1732,27 @@ function Home() {
                 </Row>
               </Col>
               <Col lg={4} md={4} sm={4} xs={4}>
-                <Row style={{ height: "15%" }}>
-                  <FormControl fullWidth>
-                    <InputLabel
-                      id="audio-group-7-8"
-                      style={{ color: "#32677F" }}
-                    >
-                      Escoge tu audio
-                    </InputLabel>
-                    <Select
-                      labelId="audio-group-7-8-label"
-                      id="audio-group-7-8-select"
-                      value={audioSelectIndex3}
-                      label="Escoge tu audio"
-                      onChange={handleChange3}
-                      style={{ color: "#32677F" }}
-                    >
-                      <MenuItem value={0}>Audio Ana</MenuItem>
-                      <MenuItem value={1}>Audio Maria</MenuItem>
-                    </Select>
-                  </FormControl>
-                </Row>
+                {/*<Row style={{ height: "15%" }}>*/}
+                {/*  <FormControl fullWidth>*/}
+                {/*    <InputLabel*/}
+                {/*      id="audio-group-7-8"*/}
+                {/*      style={{ color: "#32677F" }}*/}
+                {/*    >*/}
+                {/*      Escoge tu audio*/}
+                {/*    </InputLabel>*/}
+                {/*    <Select*/}
+                {/*      labelId="audio-group-7-8-label"*/}
+                {/*      id="audio-group-7-8-select"*/}
+                {/*      value={audioSelectIndex3}*/}
+                {/*      label="Escoge tu audio"*/}
+                {/*      onChange={handleChange3}*/}
+                {/*      style={{ color: "#32677F" }}*/}
+                {/*    >*/}
+                {/*      <MenuItem value={0}>Audio Ana</MenuItem>*/}
+                {/*      <MenuItem value={1}>Audio Maria</MenuItem>*/}
+                {/*    </Select>*/}
+                {/*  </FormControl>*/}
+                {/*</Row>*/}
                 <Row style={{ height: "25%" }}>
                   <Col
                     style={{
@@ -1685,7 +1769,7 @@ function Home() {
                   >
                     <audio
                       ref={audio6_ref}
-                      src={audioGroup3[+audioSelectIndex3]}
+                      src={audio6_src}
                       style={{ display: "none" }}
                     ></audio>
                   </Col>
@@ -1768,39 +1852,62 @@ function Home() {
             </Col>
           </Row>
         </section>
-        <section id="page11" style={{ marginBottom: "5%" }}>
+        <section
+          id="page11"
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            marginBottom: "5%",
+          }}
+        >
           <Row
             style={{ height: "100%", alignItems: "start" }}
             className="pagina-11-desktop"
           >
-            <Row
-              style={{
-                justifyContent: "right",
-                minHeight: "12%",
-              }}
-            >
-              <Col
-                style={{
-                  backgroundImage: `url(${banner_electronico})`,
-                  backgroundSize: "contain",
-                  backgroundRepeat: "no-repeat",
-                  backgroundPosition: "right",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                }}
-              >
-                <h2
-                  style={{
-                    color: "#EEBE94",
-                    fontFamily: "Led",
-                    fontSize: "1.35rem",
-                  }}
-                >
-                  TransMiCable nos facilita la movilidad
-                </h2>
-              </Col>
-            </Row>
+            <BannerElectronico
+              text={"TransMiCable mejoró la calidad de vida de las mujeres"}
+            />
+            {/*<Row*/}
+            {/*  style={{*/}
+            {/*    justifyContent: "right",*/}
+            {/*    minHeight: "12%",*/}
+            {/*  }}*/}
+            {/*>*/}
+            {/*  <Col*/}
+            {/*    style={{*/}
+            {/*      backgroundImage: `url(${banner_electronico})`,*/}
+            {/*      backgroundSize: "contain",*/}
+            {/*      backgroundRepeat: "no-repeat",*/}
+            {/*      backgroundPosition: "right",*/}
+            {/*      display: "flex",*/}
+            {/*      alignItems: "center",*/}
+            {/*      justifyContent: "right",*/}
+            {/*    }}*/}
+            {/*  >*/}
+            {/*    <div*/}
+            {/*      style={{*/}
+            {/*        width: "92%",*/}
+            {/*        height: "90%",*/}
+            {/*        overflow: "hidden",*/}
+            {/*        display: "flex",*/}
+            {/*        alignItems: "center",*/}
+            {/*      }}*/}
+            {/*      className="banner-electronico-container"*/}
+            {/*    >*/}
+            {/*      <h2*/}
+            {/*        style={{*/}
+            {/*          color: "#EEBE94",*/}
+            {/*          fontFamily: "Led",*/}
+            {/*          fontSize: "1.35rem",*/}
+            {/*          whiteSpace: "nowrap",*/}
+            {/*        }}*/}
+            {/*        className="moving-text-right"*/}
+            {/*      >*/}
+            {/*        TransMiCable mejoró la calidad de vida de las mujeres*/}
+            {/*      </h2>*/}
+            {/*    </div>*/}
+            {/*  </Col>*/}
+            {/*</Row>*/}
             <Row style={{ height: "85%" }}>
               <Col
                 lg={1}
@@ -1838,8 +1945,9 @@ function Home() {
                         fontFamily: "D-DIN",
                       }}
                     >
-                      La calidad de vida relacionada con la salud de las mujeres
-                      aumentó después de la implementación de TransMiCable.
+                      La calidad de vida relacionada con la salud aumentó entre
+                      las mujeres en la zona de influencia del TransMiCable
+                      después de su implementación.
                     </p>
                   </div>
                   <div
@@ -1877,31 +1985,31 @@ function Home() {
                 >
                   <audio
                     ref={audio7_ref}
-                    src={audioGroup4[+audioSelectIndex4]}
+                    src={audio7_src}
                     style={{ display: "none" }}
                   ></audio>
                 </Row>
-                <Row style={{ height: "10%", justifyContent: "center" }}>
-                  <FormControl style={{ width: "60%" }}>
-                    <InputLabel
-                      id="audio-group-10-11"
-                      style={{ color: "#32677F" }}
-                    >
-                      Escoge tu audio
-                    </InputLabel>
-                    <Select
-                      labelId="audio-group-10-11-label"
-                      id="audio-group-10-11-select"
-                      value={audioSelectIndex4}
-                      label="Escoge tu audio"
-                      onChange={handleChange4}
-                      style={{ color: "#32677F" }}
-                    >
-                      <MenuItem value={0}>Audio Ana</MenuItem>
-                      <MenuItem value={1}>Audio Maria</MenuItem>
-                    </Select>
-                  </FormControl>
-                </Row>
+                {/*<Row style={{ height: "10%", justifyContent: "center" }}>*/}
+                {/*  <FormControl style={{ width: "60%" }}>*/}
+                {/*    <InputLabel*/}
+                {/*      id="audio-group-10-11"*/}
+                {/*      style={{ color: "#32677F" }}*/}
+                {/*    >*/}
+                {/*      Escoge tu audio*/}
+                {/*    </InputLabel>*/}
+                {/*    <Select*/}
+                {/*      labelId="audio-group-10-11-label"*/}
+                {/*      id="audio-group-10-11-select"*/}
+                {/*      value={audioSelectIndex4}*/}
+                {/*      label="Escoge tu audio"*/}
+                {/*      onChange={handleChange4}*/}
+                {/*      style={{ color: "#32677F" }}*/}
+                {/*    >*/}
+                {/*      <MenuItem value={0}>Audio Ana</MenuItem>*/}
+                {/*      <MenuItem value={1}>Audio Maria</MenuItem>*/}
+                {/*    </Select>*/}
+                {/*  </FormControl>*/}
+                {/*</Row>*/}
               </Col>
               <Col lg={4} md={4} sm={4} xs={4}>
                 <Row style={{ height: "100%" }}>
@@ -2003,7 +2111,7 @@ function Home() {
                 style={{
                   height: "12%",
                   backgroundImage: `url(${
-                    !isAudioPlaying5 ? audio_controls : audio_controls_playing
+                    !isAudioPlaying7 ? audio_controls : audio_controls_playing
                   })`,
                   backgroundSize: "75%",
                   backgroundRepeat: "no-repeat",
@@ -2012,6 +2120,27 @@ function Home() {
                 }}
                 onClick={toggleAudio7}
               ></Row>
+              {/*<Row style={{ height: "8%" }}>*/}
+              {/*  <FormControl fullWidth>*/}
+              {/*    <InputLabel*/}
+              {/*      id="audio-group-10-11"*/}
+              {/*      style={{ color: "#32677F" }}*/}
+              {/*    >*/}
+              {/*      Escoge tu audio*/}
+              {/*    </InputLabel>*/}
+              {/*    <Select*/}
+              {/*      labelId="audio-group-10-11-label"*/}
+              {/*      id="audio-group-10-11-select"*/}
+              {/*      value={audioSelectIndex4}*/}
+              {/*      label="Escoge tu audio"*/}
+              {/*      onChange={handleChange4}*/}
+              {/*      style={{ color: "#32677F" }}*/}
+              {/*    >*/}
+              {/*      <MenuItem value={0}>Audio Ana</MenuItem>*/}
+              {/*      <MenuItem value={1}>Audio Maria</MenuItem>*/}
+              {/*    </Select>*/}
+              {/*  </FormControl>*/}
+              {/*</Row>*/}
             </Col>
           </Row>
         </section>
@@ -2050,9 +2179,12 @@ function Home() {
                 </h2>
               </div>
             </Row>
-            <Row style={{ minHeight: "85%", marginTop: "-2%" }}>
+            <Row style={{ height: "85%", marginTop: "-2%" }}>
               <Col lg={12} md={12} sm={12} xs={12}>
-                <Row style={{ height: "100%" }}>
+                <Row
+                  style={{ height: "100%" }}
+                  className="video-player-container-row"
+                >
                   <div
                     style={{
                       backgroundSize: "60%",
@@ -2075,15 +2207,16 @@ function Home() {
                         justifyContent: "center",
                         borderRadius: "20px",
                       }}
+                      className="video-player-container"
                     >
                       <iframe
                         width="95%"
                         height="95%"
                         src="https://www.youtube-nocookie.com/embed/4dvQ2NPikU4?si=VtznJ-MOhnV1Nf48"
                         title="YouTube video player"
-                        frameBorder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                         allowFullScreen
+                        className="video-player"
                       ></iframe>
                     </div>
                   </div>
@@ -2246,6 +2379,7 @@ function Home() {
                           color: "#32677F",
                           fontFamily: "Futura",
                         }}
+                        id="contacto"
                       >
                         <b>Contacto</b>
                       </h2>
@@ -2413,62 +2547,60 @@ function Home() {
                 </Row>
               </Col>
             </Row>
-          </Row>
-        </section>
-        <section>
-          <Row style={{ marginTop: "5%" }}>
-            <Col
-              style={{
-                height: "25vh",
-                width: "100%",
-                backgroundColor: "#D5D6D6",
-                alignItems: "center",
-              }}
-            >
-              <Row
+            <Row style={{ marginTop: "5%", padding: "0px" }}>
+              <Col
                 style={{
-                  display: "flex",
+                  height: "25vh",
+                  width: "100vw",
+                  backgroundColor: "#D5D6D6",
                   alignItems: "center",
-                  height: "100%",
                 }}
               >
-                <Col className="logo-container">
-                  <Image
-                    src={salurbal}
-                    alt="Logo salurbal"
-                    className="logo-resource"
-                    fluid
-                  />
-                </Col>
-                <Col className="logo-container">
-                  <Image
-                    src={drexel}
-                    alt="Logo drexel university"
-                    style={{
-                      mixBlendMode: "darken",
-                    }}
-                    className="logo-resource"
-                    fluid
-                  />
-                </Col>
-                <Col className="logo-container">
-                  <Image
-                    src={uniandes}
-                    alt="Logo universidad de los andes"
-                    className="logo-resource"
-                    fluid
-                  />
-                </Col>
-                <Col className="logo-container">
-                  <Image
-                    src={uninorte}
-                    alt="Logo universidad del norte"
-                    className="logo-resource"
-                    fluid
-                  />
-                </Col>
-              </Row>
-            </Col>
+                <Row
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    height: "100%",
+                  }}
+                >
+                  <Col className="logo-container">
+                    <Image
+                      src={salurbal}
+                      alt="Logo salurbal"
+                      className="logo-resource"
+                      fluid
+                    />
+                  </Col>
+                  <Col className="logo-container">
+                    <Image
+                      src={drexel}
+                      alt="Logo drexel university"
+                      style={{
+                        mixBlendMode: "darken",
+                      }}
+                      className="logo-resource"
+                      fluid
+                    />
+                  </Col>
+                  <Col className="logo-container">
+                    <Image
+                      src={uniandes}
+                      alt="Logo universidad de los andes"
+                      className="logo-resource"
+                      fluid
+                    />
+                  </Col>
+                  <Col className="logo-container">
+                    <Image
+                      src={uninorte}
+                      alt="Logo universidad del norte"
+                      className="logo-resource"
+                      fluid
+                    />
+                  </Col>
+                </Row>
+              </Col>
+            </Row>
           </Row>
         </section>
       </Container>

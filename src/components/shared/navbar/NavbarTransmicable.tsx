@@ -37,7 +37,9 @@ function NavbarTransmicable() {
           }}
         >
           <Col>
-            <Button text="Contacto" action={() => {}} />
+            <a href="#contacto">
+              <Button text="Contacto" action={() => {}} />
+            </a>
           </Col>
           <Col>
             <Button text="Descargas" action={() => {}} />
@@ -49,17 +51,12 @@ function NavbarTransmicable() {
           <Nav className="me-auto" navbar>
             <NavItem>
               <NavLink href={"#page1"}>
-                <b>Resultados de la evaluación del TransMiCable</b>
+                <b>Inicio</b>
               </NavLink>
             </NavItem>
             <NavItem>
               <NavLink href={"#page2"}>
                 <b>Qué es TransMiCable</b>
-              </NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink href={"#page3"}>
-                <b>Linea del TransMiCable</b>
               </NavLink>
             </NavItem>
             <NavItem>
@@ -69,7 +66,7 @@ function NavbarTransmicable() {
             </NavItem>
             <NavItem>
               <NavLink href={"#page5"}>
-                <b>Resultados estudio TrUST</b>
+                <b>Resultados del estudio TrUST</b>
               </NavLink>
             </NavItem>
           </Nav>
