@@ -18,8 +18,8 @@ function NavbarTransmicable() {
   const toggleNavbar = () => setOpen(!isOpen);
 
   return (
-    <section>
-      <Navbar container="lg" style={{ backgroundColor: "#b7d4dc" }}>
+    <section style={{ padding: "0px" }}>
+      <Navbar style={{ backgroundColor: "#b7d4dc", margin: "0px" }}>
         <NavbarBrand>
           <Hamburger
             toggled={isOpen}

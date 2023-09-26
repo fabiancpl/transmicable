@@ -5,14 +5,14 @@ import estacion_2 from "../../../assets/images/SVG/mapa_mobile4.png";
 import estacion_3 from "../../../assets/images/SVG/mapa_mobile5.png";
 import estacion_4 from "../../../assets/images/SVG/mapa_mobile6.png";
 import linea_transmicable from "../../../assets/images/SVG/mapa_mobile7.png";
-import image_amarillo from "../../../assets/images/mapa/DSC07362.jpg";
-import image_azul_oscuro from "../../../assets/images/mapa/IMG_0715.jpeg";
-import image_naranja from "../../../assets/images/mapa/IMG_6344.jpg";
-import image_morado from "../../../assets/images/mapa/IMG_0763.jpeg";
-import image_rosado from "../../../assets/images/mapa/IMG_0773.jpeg";
-import image_lavanderia from "../../../assets/images/mapa/DSC09933.jpg";
-import image_turismo from "../../../assets/images/mapa/DSC04179.jpg";
-import image_turismo_2 from "../../../assets/images/mapa/DSC04214.jpg";
+import image_amarillo from "../../../assets/images/mapa/DSC07362.png";
+import image_azul_oscuro from "../../../assets/images/mapa/IMG_0715.png";
+import image_naranja from "../../../assets/images/mapa/IMG_6344.png";
+import image_morado from "../../../assets/images/mapa/IMG_0763.png";
+import image_rosado from "../../../assets/images/mapa/IMG_0773.png";
+import image_lavanderia from "../../../assets/images/mapa/DSC09933.png";
+import image_turismo from "../../../assets/images/mapa/DSC04179.png";
+import image_turismo_2 from "../../../assets/images/mapa/DSC04214.png";
 
 import { useState } from "react";
 import ModalApp from "../../shared/modal/ModalApp.tsx";
@@ -34,8 +34,9 @@ function MobileMap() {
         id="Layer_2"
         xmlns="http://www.w3.org/2000/svg"
         width="100vw"
-        height="100vh"
+        height="90vh"
         viewBox="0 0 1080.24 1868.64"
+        style={{ margin: "0px", padding: "0px" }}
       >
         <g id="Layer_5">
           <image

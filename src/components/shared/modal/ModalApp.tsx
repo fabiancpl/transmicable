@@ -18,7 +18,6 @@ function ModalApp(props: any) {
           alignItems: "center",
           display: "flex",
           aspectRatio: "1/1",
-          background: "#32677F",
         }}
       >
         <ModalBody
@@ -26,12 +25,11 @@ function ModalApp(props: any) {
             justifyContent: "center",
             alignItems: "center",
             display: "flex",
-            background: "#32677F",
             border: "none",
             stroke: "none",
           }}
         >
-          <Image fluid src={props.image} />
+          <Image fluid src={props.image} style={{ width: "70%" }} />
         </ModalBody>
       </Modal>
     </div>

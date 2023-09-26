@@ -35,7 +35,7 @@
     background-color: #b7d4dc;
     padding: 0 !important;
     margin: 0 !important;
-    min-width: 100%;
+    width: 100vw;
 }
 
 ::-webkit-scrollbar {
@@ -45,9 +45,7 @@
 section {
     scroll-snap-align: start;
     padding: 0 !important;
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-    min-width: 100%;
+    overflow: hidden;
 }
 
 html {
@@ -134,16 +132,6 @@ html {
     justify-content: center;
 }
 
-.banner-subtitulo-tablet {
-    min-height: 15vh;
-    background-size: cover;
-    background-repeat: no-repeat;
-    margin-top: 8%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
 .texto-banner-subtitulo {
     color: white;
 }
@@ -175,9 +163,8 @@ html {
     background-size: cover;
     background-repeat: no-repeat;
     display: flex;
-    justify-content: left;
+    justify-content: center;
     align-items: start;
-    width: 100vw;
 }
 
 /*
@@ -314,7 +301,7 @@ html {
 }
 
 .moving-text-right {
-    animation: moveLeftToRightText 10s linear infinite; /* Adjust duration and timing function as per your preference */
+    animation: moveLeftToRightText 18s linear infinite; /* Adjust duration and timing function as per your preference */
 }
 
 .debug {
@@ -333,21 +320,7 @@ html {
 *** EXTRA SMALL DEVICES ***
  */
 
-@media (max-width: 376px) {
-
-    @keyframes moveLeftToRightText {
-        0% {
-            transform: translateX(125%);
-        }
-        100% {
-            transform: translateX(-125%); /* Adjust the percentage to move the image across the X-axis */
-        }
-    }
-
-    .texto-pagina-9 {
-        font-size: 0.7rem;
-    }
-
+@media (max-width: 375px) {
 
     #page1 {
         height: 80vh;
@@ -391,13 +364,7 @@ html {
     .banner-subtitulo {
         min-height: 10vh !important;
         transform: scaleX(-1) !important;
-
-    }
-
-    .banner-subtitulo-tablet {
-        min-height: 10vh !important;
-        transform: scaleX(-1) !important;
-
+        margin-right: 11%;
     }
 
     .texto-banner-subtitulo {
@@ -417,11 +384,10 @@ html {
     }
 
     .abordaje-cabina {
-        background-position: center bottom !important;
+        background-position: center top !important;
         background-size: contain !important;
         background-image: url("../../assets/images/abordaje_mobile.png") !important;
-        margin-top: -20% !important;
-        width: 100vw;
+        margin-top: -30% !important;
     }
 
     /*PAGINA 3*/
@@ -435,7 +401,7 @@ html {
         display: flex;
         align-items: start;
         justify-content: center;
-        margin-top: 15%;
+        margin-top: 5%;
     }
 
     .mapa-transmicable {
@@ -488,12 +454,7 @@ html {
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 250px;
-        height: auto;
-    }
-
-    .carousel-item {
-        margin-bottom: 5rem;
+        width: 280px;
     }
 
     .imagenes-resultado-trust {
@@ -560,19 +521,6 @@ html {
 
 @media (min-width: 376px) and (max-width: 430px) {
 
-    @keyframes moveLeftToRightText {
-        0% {
-            transform: translateX(125%);
-        }
-        100% {
-            transform: translateX(-125%); /* Adjust the percentage to move the image across the X-axis */
-        }
-    }
-
-    .texto-pagina-9 {
-        font-size: 0.9rem;
-    }
-
     #page1 {
         height: 80vh;
     }
@@ -617,11 +565,7 @@ html {
     .banner-subtitulo {
         min-height: 10vh !important;
         transform: scaleX(-1) !important;
-    }
-
-    .banner-subtitulo-tablet {
-        min-height: 10vh !important;
-        transform: scaleX(-1) !important;
+        margin-right: 11%;
     }
 
     .texto-banner-subtitulo {
@@ -643,7 +587,7 @@ html {
         background-position: bottom !important;
         background-size: contain !important;
         background-image: url("../../assets/images/abordaje_mobile.png") !important;
-        margin-top: -45% !important;
+        margin-top: -50% !important;
     }
 
     /*PAGINA 3*/
@@ -657,9 +601,7 @@ html {
         display: flex;
         align-items: start !important;
         justify-content: center;
-        margin-left: 0 !important;
-        margin-right: 0 !important;
-        overflow: scroll;
+        margin-top: 5%;
     }
 
     .mapa-transmicable {
@@ -718,10 +660,6 @@ html {
         justify-content: center;
         align-items: center;
         width: 75vw;
-    }
-
-    .carousel-item {
-        margin-bottom: 5rem;
     }
 
     .carousel-container {
@@ -797,18 +735,6 @@ html {
 
 @media (min-width: 431px) and (max-width: 1080px) {
 
-    .pagina10-text-mobile {
-        font-size: 1.5rem;
-    }
-
-    .bullet-tablet-pagina-7 {
-        height: 25% !important;
-    }
-
-    .texto-pagina-9 {
-        font-size: 1.5rem;
-    }
-
     #page1 {
         height: 80vh;
     }
@@ -880,8 +806,7 @@ html {
         display: flex;
         align-items: start !important;
         justify-content: center;
-        margin-left: 0 !important;
-        margin-right: 0 !important;
+        margin-top: 5%;
     }
 
     .mapa-transmicable {
@@ -940,36 +865,6 @@ html {
         width: 500px;
     }
 
-    .banner-subtitulo-tablet {
-        min-height: 15vh;
-        background-size: cover;
-        background-repeat: no-repeat;
-        margin-top: 8%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .banner-subtitulo-tablet-container {
-        margin-bottom: 15%;
-    }
-
-    .bullet-element {
-        margin-bottom: 5% !important;
-    }
-
-    .bullet-tablet-pagina-7 {
-        font-size: 1.7rem;
-    }
-
-    .bullet-tablet-pagina-11 {
-        font-size: 1.7rem;
-    }
-
-    .carousel-item {
-        margin-bottom: 5rem;
-    }
-
     .imagenes-resultado-trust {
         display: none;
     }
@@ -1025,7 +920,6 @@ html {
     .pagina-11-mobile {
         display: unset !important;
     }
-
 }
 
 @keyframes moveLeftToRight {
@@ -1039,7 +933,7 @@ html {
 
 @keyframes moveLeftToRightText {
     0% {
-        transform: translateX(200%);
+        transform: translateX(225%);
     }
     100% {
         transform: translateX(-125%); /* Adjust the percentage to move the image across the X-axis */
