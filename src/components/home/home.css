@@ -66,6 +66,19 @@ html {
     scroll-snap-type: none !important;
 }
 
+.video-player {
+    width: 60%;
+    height: 100%;
+    border: none; /* Remove the default border */
+    border-radius: 10px; /* Set the initial border radius */
+}
+
+/* Add a border with the desired color */
+.video-player-with-border {
+    border: 15px solid #32677F;
+}
+
+
 .carousel .carousel-indicators button {
     width: 20px;
     height: 20px;
@@ -335,6 +348,31 @@ html {
 
 @media (max-width: 376px) {
 
+    .contenedor-texto-financiacion {
+        width: 90% !important;
+        height: 20vh !important;
+    }
+
+    .page12-subtitulo-container {
+        height: 10% !important;
+        width: 100% !important;
+    }
+
+    .video-row-container {
+        height: 45% !important;
+    }
+
+    .video-player {
+        width: 95%;
+        height: 95%;
+        border: none; /* Remove the default border */
+        border-radius: 10px; /* Set the initial border radius */
+    }
+
+    .video-player-with-border {
+        border: 15px solid #32677F;
+    }
+
     @keyframes moveLeftToRightText {
         0% {
             transform: translateX(125%);
@@ -559,6 +597,30 @@ html {
  */
 
 @media (min-width: 376px) and (max-width: 430px) {
+
+    .contenedor-texto-financiacion {
+        width: 90% !important;
+    }
+
+    .page12-subtitulo-container {
+        height: 10% !important;
+        width: 100% !important;
+    }
+
+    .video-row-container {
+        height: 45% !important;
+    }
+
+    .video-player {
+        width: 95%;
+        height: 95%;
+        border: none; /* Remove the default border */
+        border-radius: 10px; /* Set the initial border radius */
+    }
+
+    .video-player-with-border {
+        border: 15px solid #32677F;
+    }
 
     @keyframes moveLeftToRightText {
         0% {
@@ -796,6 +858,27 @@ html {
  */
 
 @media (min-width: 431px) and (max-width: 1080px) {
+
+    .page12-subtitulo-container {
+        height: 10% !important;
+        width: 80% !important;
+        justify-content: left !important;
+    }
+
+    .video-row-container {
+        height: 45% !important;
+    }
+
+    .video-player {
+        width: 95%;
+        height: 95%;
+        border: none; /* Remove the default border */
+        border-radius: 10px; /* Set the initial border radius */
+    }
+
+    .video-player-with-border {
+        border: 15px solid #32677F;
+    }
 
     .pagina10-text-mobile {
         font-size: 1.5rem;

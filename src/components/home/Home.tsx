@@ -778,12 +778,20 @@ function Home() {
                   <Row
                     style={{
                       height: "85%",
-                      backgroundImage: `url(${grafica_1})`,
-                      backgroundSize: "85%",
-                      backgroundRepeat: "no-repeat",
-                      backgroundPosition: "center",
+                      justifyContent: "center",
                     }}
-                  ></Row>
+                  >
+                    <div
+                      style={{
+                        backgroundImage: `url(${grafica_1})`,
+                        backgroundSize: "contain",
+                        backgroundRepeat: "no-repeat",
+                        backgroundPosition: "center",
+                        height: "100%",
+                        width: "100%",
+                      }}
+                    ></div>
+                  </Row>
                 </Col>
                 <Col
                   lg={4}
@@ -791,18 +799,29 @@ function Home() {
                   sm={12}
                   xs={12}
                   style={{
-                    backgroundImage: `url(${
-                      !isAudioPlaying2 ? personaje_2 : personaje_2_playing
-                    })`,
-                    backgroundSize: "90%",
-                    backgroundPosition: "center bottom",
-                    backgroundRepeat: "no-repeat",
-                    marginTop: "5%",
+                    justifyContent: "center",
+                    padding: "1.5rem",
                   }}
-                  onClick={() =>
-                    handleAudio(audio2_ref, isAudioPlaying2, setIsAudioPlaying2)
-                  }
                 >
+                  <div
+                    style={{
+                      backgroundImage: `url(${
+                        !isAudioPlaying2 ? personaje_2 : personaje_2_playing
+                      })`,
+                      backgroundSize: "contain",
+                      backgroundPosition: "center bottom",
+                      backgroundRepeat: "no-repeat",
+                      width: "100%",
+                      height: "100%",
+                    }}
+                    onClick={() =>
+                      handleAudio(
+                        audio2_ref,
+                        isAudioPlaying2,
+                        setIsAudioPlaying2,
+                      )
+                    }
+                  ></div>
                   <audio
                     ref={audio2_ref}
                     src={audio2_src}
@@ -2111,6 +2130,7 @@ function Home() {
                   marginRight: "0px",
                   marginLeft: "0px",
                 }}
+                className="page12-subtitulo-container"
               >
                 <div
                   style={{
@@ -2150,55 +2170,42 @@ function Home() {
                   marginTop: "-2%",
                   marginRight: "0px",
                   marginLeft: "0px",
+                  alignItems: "center",
                 }}
+                className="video-row-container"
               >
                 <Col
                   lg={12}
                   md={12}
                   sm={12}
                   xs={12}
-                  style={{ padding: "0px", justifyContent: "center" }}
+                  style={{
+                    padding: "0px",
+                    justifyContent: "center",
+                    marginLeft: "0px",
+                    marginRight: "0px",
+                    height: "80%",
+                  }}
                 >
-                  <Row
-                    style={{ height: "100%" }}
-                    className="video-player-container-row"
+                  <div
+                    style={{
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      width: "100%",
+                      height: "100%",
+                    }}
                   >
-                    <div
-                      style={{
-                        backgroundSize: "60%",
-                        backgroundRepeat: "no-repeat",
-                        backgroundPosition: "center",
-                        display: "flex",
-                        alignItems: "center",
-                        justifyContent: "center",
-                        width: "100%",
-                        height: "100%",
-                      }}
-                    >
-                      <div
-                        style={{
-                          width: "60%",
-                          height: "80%",
-                          backgroundColor: "#32677F",
-                          display: "flex",
-                          alignItems: "center",
-                          justifyContent: "center",
-                          borderRadius: "20px",
-                        }}
-                        className="video-player-container"
-                      >
-                        <iframe
-                          width="95%"
-                          height="95%"
-                          src="https://www.youtube-nocookie.com/embed/4dvQ2NPikU4?si=VtznJ-MOhnV1Nf48"
-                          title="YouTube video player"
-                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                          allowFullScreen
-                          className="video-player"
-                        ></iframe>
-                      </div>
-                    </div>
-                  </Row>
+                    <iframe
+                      width="95%"
+                      height="95%"
+                      src="https://www.youtube-nocookie.com/embed/4dvQ2NPikU4?si=VtznJ-MOhnV1Nf48"
+                      title="YouTube video player"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      allowFullScreen
+                      className="video-player video-player-with-border"
+                    ></iframe>
+                  </div>
                 </Col>
               </Row>
               <Row
@@ -2549,6 +2556,7 @@ function Home() {
                           display: "flex",
                           alignItems: "center",
                         }}
+                        className="contenedor-texto-financiacion"
                       >
                         <p
                           style={{
