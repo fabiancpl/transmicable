@@ -1,0 +1,8 @@
+.transparent-navbar {
+    background-color: transparent !important;
+    /* Add any other custom styles you need for the transparent Navbar */
+}
+
+.debug {
+    outline: red dashed 5px;
+}

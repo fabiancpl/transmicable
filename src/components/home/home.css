@@ -1,0 +1,1139 @@
+@font-face {
+    font-family: 'Lemon-Milk';
+    src: url("../../assets/fonts/LEMONMILK-Regular.otf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Futura';
+    src: url("../../assets/fonts/futur.ttf") format("truetype");
+    font-weight: normal;
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'D-DIN';
+    src: url("../../assets/fonts/D-DIN.otf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Led';
+    src: url("../../assets/fonts/led_8x6.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+.main-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #b7d4dc;
+    padding: 0 !important;
+    margin: 0 !important;
+    min-width: 100%;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+section {
+    scroll-snap-align: start;
+    padding: 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    min-width: 100%;
+}
+
+html {
+    scroll-snap-type: y mandatory;
+}
+
+#page1 {
+    height: 83vh;
+}
+
+#page2, #page3, #page4, #page5, #page6, #page7, #page8, #page9, #page10, #page11, #page12 {
+    height: 95vh;
+}
+
+#page12 {
+    scroll-snap-type: none !important;
+}
+
+.video-player {
+    width: 60%;
+    height: 100%;
+    border: none; /* Remove the default border */
+    border-radius: 10px; /* Set the initial border radius */
+}
+
+/* Add a border with the desired color */
+.video-player-with-border {
+    border: 15px solid #32677F;
+}
+
+
+.carousel .carousel-indicators button {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+}
+
+.carousel .carousel-caption {
+    margin-bottom: -48px;
+}
+
+.carousel .carousel-control-next-icon.modified {
+    background-image: none;
+}
+
+/*
+*
+*** PAGINA 1 ***
+*
+*/
+.cabina-transmicable {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 62vh;
+    margin-top: -3.5%;
+}
+
+.titulo-primera-pagina {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 8%;
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    width: 200px;
+    height: 100px;
+    margin-right: 3%;
+    margin-left: 3%;
+}
+
+.logo-resource {
+    width: 70%;
+    aspect-ratio: 3/2;
+    object-fit: contain;
+}
+
+/*
+*
+*** PAGINA 2 ***
+*
+*/
+
+.banner-subtitulo {
+    min-height: 15vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-top: 8%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.banner-subtitulo-tablet {
+    min-height: 15vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-top: 8%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.texto-banner-subtitulo {
+    color: white;
+}
+
+.parrafo-pagina-2-container {
+    display: flex;
+    justify-content: center;
+}
+
+.parrafo-pagina-2 {
+    text-align: justify;
+    text-justify: inter-word;
+    color: #32677F;
+    width: 30vw;
+    font-family: D-DIN;
+}
+
+.abordaje-cabina {
+    display: flex;
+    justify-content: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 62vh;
+    margin-top: -15%;
+}
+
+.mountains {
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: left;
+    align-items: start;
+    width: 100vw;
+}
+
+/*
+*
+*** PAGINA 3 ***
+*
+*/
+
+.mapa-transmicable {
+    height: 100%;
+    background-size: contain;
+    background-position: top;
+    background-repeat: no-repeat;
+    margin-top: 3%;
+    justify-content: center;
+    display: flex;
+}
+
+.mapa-transmicable-container {
+    height: 100%;
+    width: 100vw;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+}
+
+.mapa-transmicable-container-mobile {
+    display: none;
+}
+
+/*
+*
+*** PAGINA 4 ***
+*
+*/
+
+.mountains-personaje-1 {
+    padding-top: 6%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    min-height: 95vh;
+}
+
+.audio-1 {
+    min-height: 18vh;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-top: 22%;
+    cursor: pointer;
+}
+
+.audio-1-column {
+    padding-left: 5%;
+}
+
+.bubble-1 {
+    height: 60vh;
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.bubble-1-column {
+    display: flex;
+    justify-content: center;
+    padding-left: 5%;
+}
+
+.personaje-1-mobile-col {
+    display: none;
+}
+
+.personaje-1-mobile {
+    display: none;
+}
+
+/*
+*
+*** PAGINA 5 ***
+*
+*/
+
+.banner-subtitulo-larger {
+    min-height: 15vh;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
+    margin-top: 3%;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+}
+
+.carousel-mobile {
+    display: none;
+}
+
+.pagina-6-mobile {
+    display: none !important;
+}
+
+.pagina-7-mobile {
+    display: none !important;
+}
+
+.pagina-8-mobile {
+    display: none !important;
+}
+
+.pagina-9-mobile {
+    display: none !important;
+}
+
+.pagina-10-mobile {
+    display: none !important;
+}
+
+.pagina-11-mobile {
+    display: none !important;
+}
+
+.moving-image-right {
+    animation: moveLeftToRight 20s linear infinite; /* Adjust duration and timing function as per your preference */
+}
+
+.moving-image-left {
+    animation: moveRightToLeft 20s linear infinite; /* Adjust duration and timing function as per your preference */
+}
+
+.moving-text-right {
+    animation: moveLeftToRightText 10s linear infinite; /* Adjust duration and timing function as per your preference */
+}
+
+.debug {
+    outline: red dashed 5px;
+}
+
+.debug-aux {
+    outline: black dashed 5px;
+}
+
+.debug-aux-2 {
+    outline: darkorange dashed 5px;
+}
+
+/*
+*** EXTRA SMALL DEVICES ***
+ */
+
+@media (max-width: 376px) {
+
+    .contenedor-texto-financiacion {
+        width: 90% !important;
+        height: 20vh !important;
+    }
+
+    .page12-subtitulo-container {
+        height: 10% !important;
+        width: 100% !important;
+    }
+
+    .video-row-container {
+        height: 45% !important;
+    }
+
+    .video-player {
+        width: 95%;
+        height: 95%;
+        border: none; /* Remove the default border */
+        border-radius: 10px; /* Set the initial border radius */
+    }
+
+    .video-player-with-border {
+        border: 15px solid #32677F;
+    }
+
+    @keyframes moveLeftToRightText {
+        0% {
+            transform: translateX(125%);
+        }
+        100% {
+            transform: translateX(-125%); /* Adjust the percentage to move the image across the X-axis */
+        }
+    }
+
+    .texto-pagina-9 {
+        font-size: 0.7rem;
+    }
+
+
+    #page1 {
+        height: 80vh;
+    }
+
+    #page2, #page3, #page4, #page5, #page6, #page7, #page8, #page9, #page10, #page11 {
+        height: 90vh;
+    }
+
+    /*PAGINA 1*/
+    .cabina-transmicable {
+        min-height: 40vh !important;
+        margin-top: -4.5% !important;
+        background-size: contain !important;
+        background-position: center !important;
+    }
+
+    .titulo-primera-pagina {
+        margin-top: 8% !important;
+    }
+
+    .titulo-primera-pagina h1 {
+        font-size: 1.675rem !important;
+    }
+
+    .titulo-primera-pagina h2 {
+        font-size: 1.375rem !important;
+    }
+
+    .logo-container {
+        margin-right: 0% !important;
+        margin-left: 0% !important;
+        margin-bottom: 5%;
+    }
+
+    .logo-resource {
+        width: 100% !important;
+    }
+
+    /*PAGINA 2*/
+    .banner-subtitulo {
+        min-height: 10vh !important;
+        transform: scaleX(-1) !important;
+
+    }
+
+    .banner-subtitulo-tablet {
+        min-height: 10vh !important;
+        transform: scaleX(-1) !important;
+
+    }
+
+    .texto-banner-subtitulo {
+        transform: scaleX(-1) !important;
+    }
+
+    .parrafo-pagina-2-container {
+        height: 30vh;
+        overflow: auto;
+        margin-bottom: 5%;
+    }
+
+    .parrafo-pagina-2 {
+        font-size: clamp(0.725rem, 2.5vw, 0.785rem) !important;
+        padding: 0.5rem 1.5rem;
+        width: unset !important;
+    }
+
+    .abordaje-cabina {
+        background-position: center bottom !important;
+        background-size: contain !important;
+        background-image: url("../../assets/images/abordaje_mobile.png") !important;
+        margin-top: -20% !important;
+        width: 100vw;
+    }
+
+    /*PAGINA 3*/
+    .mapa-transmicable-container {
+        display: none !important;
+    }
+
+    .mapa-transmicable-container-mobile {
+        height: 100%;
+        width: 100vw;
+        display: flex;
+        align-items: start;
+        justify-content: center;
+        margin-top: 15%;
+    }
+
+    .mapa-transmicable {
+        background-image: url("../../assets/images/mapa_mobile.png") !important;
+    }
+
+    /*PAGINA 4*/
+    .mountains-personaje-1 {
+        background-image: url("../../assets/images/mountains.png") !important;
+    }
+
+    .audio-1 {
+        display: none !important;
+    }
+
+    .bubble-1-column {
+        display: none;
+    }
+
+    .personaje-1-mobile {
+        height: 85vh;
+        display: flex !important;
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        cursor: pointer;
+    }
+
+    .personaje-1-mobile-col {
+        display: flex;
+        justify-content: center;
+    }
+
+    /*PAGINA 5*/
+    .banner-subtitulo-larger {
+        display: none;
+    }
+
+    .carousel-mobile {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 110%;
+    }
+
+    .carousel-mobile-item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 250px;
+        height: auto;
+    }
+
+    .carousel-item {
+        margin-bottom: 5rem;
+    }
+
+    .imagenes-resultado-trust {
+        display: none;
+    }
+
+    .carousel-container {
+        padding-left: unset;
+    }
+
+    .pagina-6-desktop {
+        display: none !important;
+    }
+
+    .pagina-6-mobile {
+        display: unset !important;
+    }
+
+    .pagina-7-desktop {
+        display: none !important;
+    }
+
+    .pagina-7-mobile {
+        display: flex !important;
+    }
+
+    .pagina-8-desktop {
+        display: none !important;
+    }
+
+    .pagina-8-mobile {
+        display: unset !important;
+    }
+
+    .pagina-9-desktop {
+        display: none !important;
+    }
+
+    .pagina-9-mobile {
+        display: unset !important;
+    }
+
+    .pagina-10-desktop {
+        display: none !important;
+    }
+
+    .pagina-10-mobile {
+        display: unset !important;
+    }
+
+    .pagina-11-desktop {
+        display: none !important;
+    }
+
+    .pagina-11-mobile {
+        display: unset !important;
+    }
+
+}
+
+/*
+*** MOBILE DEVICES ***
+ */
+
+@media (min-width: 376px) and (max-width: 430px) {
+
+    .contenedor-texto-financiacion {
+        width: 90% !important;
+    }
+
+    .page12-subtitulo-container {
+        height: 10% !important;
+        width: 100% !important;
+    }
+
+    .video-row-container {
+        height: 45% !important;
+    }
+
+    .video-player {
+        width: 95%;
+        height: 95%;
+        border: none; /* Remove the default border */
+        border-radius: 10px; /* Set the initial border radius */
+    }
+
+    .video-player-with-border {
+        border: 15px solid #32677F;
+    }
+
+    @keyframes moveLeftToRightText {
+        0% {
+            transform: translateX(125%);
+        }
+        100% {
+            transform: translateX(-125%); /* Adjust the percentage to move the image across the X-axis */
+        }
+    }
+
+    .texto-pagina-9 {
+        font-size: 0.9rem;
+    }
+
+    #page1 {
+        height: 80vh;
+    }
+
+    #page2, #page3, #page4, #page5, #page6, #page7, #page8, #page9, #page10, #page11 {
+        height: 90vh;
+    }
+
+    /*PAGINA 1*/
+    .cabina-transmicable {
+        min-height: 42vh !important;
+        margin-top: -4.5% !important;
+        background-size: contain !important;
+        background-position: center !important;
+        display: flex;
+        justify-content: center;
+    }
+
+    .titulo-primera-pagina {
+        margin-top: 8% !important;
+    }
+
+    .titulo-primera-pagina h1 {
+        font-size: 1.87rem !important;
+    }
+
+    .titulo-primera-pagina h2 {
+        font-size: 1.57rem !important;
+    }
+
+    .logo-container {
+        margin-right: 0% !important;
+        margin-left: 0% !important;
+        margin-bottom: 5%;
+    }
+
+    .logo-resource {
+        width: 100% !important;
+    }
+
+    /*PAGINA 2*/
+    .banner-subtitulo {
+        min-height: 10vh !important;
+        transform: scaleX(-1) !important;
+    }
+
+    .banner-subtitulo-tablet {
+        min-height: 10vh !important;
+        transform: scaleX(-1) !important;
+    }
+
+    .texto-banner-subtitulo {
+        transform: scaleX(-1) !important;
+    }
+
+    .parrafo-pagina-2-container {
+        height: clamp(30vh, 35vh, 40vh);
+        overflow: auto;
+    }
+
+    .parrafo-pagina-2 {
+        font-size: clamp(0.725rem, 4vw, 0.785rem) !important;
+        padding: 0.5rem 1.5rem;
+        width: unset !important;
+    }
+
+    .abordaje-cabina {
+        background-position: bottom !important;
+        background-size: contain !important;
+        background-image: url("../../assets/images/abordaje_mobile.png") !important;
+        margin-top: -45% !important;
+    }
+
+    /*PAGINA 3*/
+    .mapa-transmicable-container {
+        display: none !important;
+    }
+
+    .mapa-transmicable-container-mobile {
+        height: 100%;
+        width: 100vw;
+        display: flex;
+        align-items: start !important;
+        justify-content: center;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        overflow: scroll;
+    }
+
+    .mapa-transmicable {
+        background-image: url("../../assets/images/mapa_mobile.png") !important;
+    }
+
+    /*PAGINA 4*/
+    .mountains-personaje-1 {
+        background-image: url("../../assets/images/mountains.png") !important;
+        margin-top: unset !important;
+
+    }
+
+    .audio-1 {
+        display: none !important;
+    }
+
+    .bubble-1-column {
+        display: none;
+    }
+
+    .personaje-1-mobile {
+        height: 85vh;
+        display: flex !important;
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        cursor: pointer;
+    }
+
+    .personaje-1-mobile-col {
+        display: flex;
+        justify-content: center;
+    }
+
+    /*PAGINA 5*/
+    .banner-subtitulo-larger {
+        display: none;
+    }
+
+    .imagenes-resultado-trust {
+        display: none;
+    }
+
+    .carousel-mobile {
+        display: flex;
+        justify-content: center;
+        height: 90%;
+    }
+
+    .carousel-mobile-item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 75vw;
+    }
+
+    .carousel-item {
+        margin-bottom: 5rem;
+    }
+
+    .carousel-container {
+        padding-left: unset !important;
+    }
+
+    .pagina-6-desktop {
+        display: none !important;
+    }
+
+    .pagina-6-mobile {
+        display: unset !important;
+    }
+
+    .pagina-7-desktop {
+        display: none !important;
+    }
+
+    .pagina-7-mobile {
+        display: flex !important;
+    }
+
+    .pagina-8-desktop {
+        display: none !important;
+    }
+
+    .pagina-8-mobile {
+        display: unset !important;
+    }
+
+    .pagina-9-desktop {
+        display: none !important;
+    }
+
+    .pagina-9-mobile {
+        display: unset !important;
+    }
+
+    .pagina-10-desktop {
+        display: none !important;
+    }
+
+    .pagina-10-mobile {
+        display: unset !important;
+    }
+
+    .pagina-11-desktop {
+        display: none !important;
+    }
+
+    .pagina-11-mobile {
+        display: unset !important;
+    }
+
+    .video-player {
+        width: 95% !important;
+        height: 70% !important;
+    }
+
+    .video-player-container {
+        width: 90% !important;
+        height: 90% !important;
+    }
+
+    .video-player-container-row {
+        height: 45% !important;
+    }
+}
+
+/*
+*** TABLET DEVICES ***
+ */
+
+@media (min-width: 431px) and (max-width: 1080px) {
+
+    .page12-subtitulo-container {
+        height: 10% !important;
+        width: 80% !important;
+        justify-content: left !important;
+    }
+
+    .video-row-container {
+        height: 45% !important;
+    }
+
+    .video-player {
+        width: 95%;
+        height: 95%;
+        border: none; /* Remove the default border */
+        border-radius: 10px; /* Set the initial border radius */
+    }
+
+    .video-player-with-border {
+        border: 15px solid #32677F;
+    }
+
+    .pagina10-text-mobile {
+        font-size: 1.5rem;
+    }
+
+    .bullet-tablet-pagina-7 {
+        height: 25% !important;
+    }
+
+    .texto-pagina-9 {
+        font-size: 1.5rem;
+    }
+
+    #page1 {
+        height: 80vh;
+    }
+
+    #page2, #page3, #page4, #page5, #page6, #page7, #page8, #page9, #page10, #page11 {
+        height: 90vh;
+    }
+
+    /*PAGINA 1*/
+    .cabina-transmicable {
+        min-height: 40vh !important;
+        margin-top: -4% !important;
+        background-size: contain !important;
+        background-position: center !important;
+    }
+
+    .titulo-primera-pagina {
+        margin-top: 5% !important;
+    }
+
+    .titulo-primera-pagina h1 {
+        font-size: 2.15rem !important;
+    }
+
+    .titulo-primera-pagina h2 {
+        font-size: 1.8rem !important;
+    }
+
+    .logo-container {
+        margin-right: 0% !important;
+        margin-left: 0% !important;
+    }
+
+    .logo-resource {
+        width: 90% !important;
+    }
+
+    /*PAGINA 2*/
+    .banner-subtitulo {
+        min-height: 8vh !important;
+        margin-bottom: 8%;
+    }
+
+    .parrafo-pagina-2-container {
+        height: clamp(45vh, 45vh, 55vh);
+        overflow: auto;
+    }
+
+    .parrafo-pagina-2 {
+        font-size: clamp(0.725rem, 4vw, 1rem) !important;
+        padding: 0.5rem 1.5rem;
+        width: unset !important;
+    }
+
+    .abordaje-cabina {
+        background-position: bottom !important;
+        background-size: contain !important;
+        margin-top: -72% !important;
+    }
+
+    /*PAGINA 3*/
+    .mapa-transmicable-container {
+        display: none !important;
+    }
+
+    .mapa-transmicable-container-mobile {
+        height: 100%;
+        width: 100vw;
+        display: flex;
+        align-items: start !important;
+        justify-content: center;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+
+    .mapa-transmicable {
+        background-image: url("../../assets/images/mapa_mobile.png") !important;
+        min-height: 80vh;
+        overflow: auto;
+    }
+
+    /*PAGINA 4*/
+    .mountains-personaje-1 {
+        background-image: url("../../assets/images/mountains.png") !important;
+        margin-top: unset !important;
+    }
+
+    .audio-1 {
+        display: none !important;
+    }
+
+    .bubble-1-column {
+        display: none;
+    }
+
+    .personaje-1-mobile {
+        height: 85vh;
+        display: flex !important;
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        cursor: pointer;
+    }
+
+    .personaje-1-mobile-col {
+        display: flex;
+        justify-content: center;
+    }
+
+    /*PAGINA 5*/
+    .banner-subtitulo-larger {
+        display: none;
+    }
+
+    .carousel-mobile {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+    }
+
+    .carousel-mobile-item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 500px;
+    }
+
+    .banner-subtitulo-tablet {
+        min-height: 15vh;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin-top: 8%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .banner-subtitulo-tablet-container {
+        margin-bottom: 15%;
+    }
+
+    .bullet-element {
+        margin-bottom: 5% !important;
+    }
+
+    .bullet-tablet-pagina-7 {
+        font-size: 1.7rem;
+    }
+
+    .bullet-tablet-pagina-11 {
+        font-size: 1.7rem;
+    }
+
+    .carousel-item {
+        margin-bottom: 5rem;
+    }
+
+    .imagenes-resultado-trust {
+        display: none;
+    }
+
+    .carousel-container {
+        padding-left: unset;
+    }
+
+    .pagina-6-desktop {
+        display: none !important;
+    }
+
+    .pagina-6-mobile {
+        display: unset !important;
+    }
+
+    .pagina-7-desktop {
+        display: none !important;
+    }
+
+    .pagina-7-mobile {
+        display: flex !important;
+    }
+
+    .pagina-8-desktop {
+        display: none !important;
+    }
+
+    .pagina-8-mobile {
+        display: unset !important;
+    }
+
+    .pagina-9-desktop {
+        display: none !important;
+    }
+
+    .pagina-9-mobile {
+        display: unset !important;
+    }
+
+    .pagina-10-desktop {
+        display: none !important;
+    }
+
+    .pagina-10-mobile {
+        display: unset !important;
+    }
+
+    .pagina-11-desktop {
+        display: none !important;
+    }
+
+    .pagina-11-mobile {
+        display: unset !important;
+    }
+
+}
+
+@keyframes moveLeftToRight {
+    0% {
+        transform: translateX(-125%);
+    }
+    100% {
+        transform: translateX(125%); /* Adjust the percentage to move the image across the X-axis */
+    }
+}
+
+@keyframes moveLeftToRightText {
+    0% {
+        transform: translateX(200%);
+    }
+    100% {
+        transform: translateX(-125%); /* Adjust the percentage to move the image across the X-axis */
+    }
+}
+
+@keyframes moveRightToLeft {
+    0% {
+        transform: translateX(125%);
+    }
+    100% {
+        transform: translateX(-125%); /* Adjust the percentage to move the image across the X-axis */
+    }
+}
